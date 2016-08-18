@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<!DOCTYPE input-forms >
+
+<!--  CHANGE LOG 2008-05-02 by H. Lewis Ulman                              -->
+<!--  1. Removed "bgsu_story_papers" and "cudac" <name-map> elements from  -->
+<!--     <form-map>. We need only one form at this point.                  -->
+<!--  2. Renamed form-name of default name-map to "DALN"                   -->
+<!--  3. Removed <form> elements for "bgsu_story_papers," "cudac," and     -->
+<!--     "one" forms.                                                      -->
+<!--  4. Changed name attribute of "traditional" form to "DALN."           -->
+<!--  5. Constructed page 1 with fields for consent and release forms      -->
+<!--     and added value-pairs for dropdown fields.                        -->
+<!--  6. Constructed page 2 with fields that describe the contributor and  -->
+<!--     others involved in recording the narrative; added value-pairs     -->
+<!--     for dropdown fields.                                              -->
+<!--  7. Constructed page 3 with fields that describe the literacy         -->
+<!--     narrative; added value-pairs for dropdown fields.                 -->
+<!--  8. Removed value-pairs for iso languages.                            -->
+<!--                                                                       -->
+<!--  CHANGE LOG 2008-05-07 by H. Lewis Ulman                              -->
+<!--  9. Changed fields on page one to radio buttons.                      -->
+<!-- 10. Removed dc.permissions field and value-pair                       -->
+<!--                                                                       -->
+<!--  CHANGE LOG 2008-08-08 by H. Lewis Ulman                              -->
+<!-- 11. Changed wording of consent, release, and deed hints to complement -->
+<!--     the text and associated links to external forms.                  -->
+<!--                                                                       -->
+<!--  CHANGE LOG 2008-09-28 by H. Lewis Ulman                              -->
+<!-- 12. Eliminated hint text, incorporated them in structural.xsl so that -->
+<!--     the text could precede the text of links to external forms.       -->
+<!-- 13. Eliminated Deed of Gift input form, placing it instead in the     -->
+<!--     final license step.                                               -->
+<!--                                                                       -->
+<!--  CHANGE LOG 2008-11-17 by H. Lewis Ulman                              -->
+<!-- 14. Changed the question and value-pair for the                       -->
+<!--     dc.contributor.institution question.                              -->
+
+
+<input-forms>
+
+ <!-- The form-map maps collection handles to forms. DSpace does not       -->
+ <!-- require that a collection's name be unique, even within a community. -->
+ <!-- DSpace does however insure that each collection's handle is unique.  -->
+ <!-- Form-map provides the means to associate a unique collection name    -->
+ <!-- with a form. The form-map also provides the special handle "default" -->
+ <!-- (which is never a collection), here mapped to "traditional". Any     -->
+ <!-- collection which does not appear in this map will be associated with -->
+ <!-- the mapping for handle "default".                                    -->
+
+ <form-map>
+   <name-map collection-handle="default" form-name="DALN" />
+ </form-map>
+
+
+ <!-- The form-definitions map lays out the detailed definition of all the -->
+ <!-- submission forms.Each separate form set has a unique name as an      -->
+ <!-- attribute. This name matches one of the names in the form-map. One   -->
+ <!-- named form set has the name "traditional"; as this name suggests,    -->
+ <!-- it is the old style and is also the default, which gets used when    -->
+ <!-- the specified collection has no correspondingly named form set.      -->
+ <!--                                                                      -->
+ <!-- Each form set contains an ordered set of pages; each page defines    -->
+ <!-- one submission metadata entry screen. Each page has an ordered list  -->
+ <!-- of field definitions, Each field definition corresponds to one       -->
+ <!-- metatdata entry (a so-called row), which has a DC element name, a    -->
+ <!-- displayed label, a text string prompt which is called a hint , and   -->
+ <!-- an input-type. Each field also may hold optional elements: DC        -->
+ <!-- qualifier name, a repeatable flag, and a text string whose presence  -->
+ <!-- serves as a 'this field is required' flag.                           -->
+
+ <form-definitions>
+
+   <form name="DALN">
+ 
+ <!-- Page one contains the consent and release forms and the distribution -->
+ <!-- permissions. -->
+ 
+     <page number="1">
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier>consent</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Consent to Participate</label>
+         <input-type value-pairs-name="consent">list</input-type>
+         <hint></hint>
+         <required>We must have your informed consent, or the consent of your parent or guardian,
+           before we may accept your literacy narrative.</required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier>release</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Release for Materials</label>
+         <input-type value-pairs-name="consent">list</input-type>
+         <hint></hint>
+         <required>We must have your release, or a release by your parent or guardian, 
+           before we may accept your literacy narrative.</required>
+       </field>
+              
+     </page>
+     
+ <!-- Page two gathers information about the contributor and others involved -->
+ <!-- in creating the literacy narrative.                                    -->
+     
+     <page number="2">
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Author</label>
+         <input-type>name</input-type>
+         <hint>If you wish, enter the name of the author of this literacy narrative (you can click "Add More" to enter
+           multiple names for a collaborative narrative). (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>creator</dc-element>
+         <dc-qualifier>yearofbirth</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Year of Birth</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find narratives by people of a particular age group,
+           please provide your year of birth (or years of birth for collaborative entries), using four digits. (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>creator</dc-element>
+         <dc-qualifier>gender</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Gender</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find narratives by people of a particular gender or sexual orientation, please describe your gender (for example, male, female, transgender) and/or sexual orientation (for example: gay, bisexual, heterosexual). (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>creator</dc-element>
+         <dc-qualifier>class</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Socioeconomic Class</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find narratives by people of a particular socioeconomic class,
+         please describe your socioeconomic class (or classes, for collaborative entries) at the time(s) to which your 
+         narrative refers (e.g. working class, middle class, upper class). (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>creator</dc-element>
+         <dc-qualifier>raceethnicity</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Race/Ethnicity</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find narratives by people of a particular race or ethnicity,
+           please describe your race(s) or ethnicity/ethnicities. (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>interviewer</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Name of Interviewer(s)</label>
+         <input-type>name</input-type>
+         <hint>If you would like to acknowledge an interviewer (or interviewers) who participated in recording your
+           narrative (and have the interviewer's permission to do so), you can enter his or her name here. (Optional)</hint>
+         <required></required>
+       </field>
+       
+     </page>
+
+     <page number="3">
+       
+<!-- Page three gathers information about the literacy narrative.   -->
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Title</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find your literacy narrative, please provide a brief title for your literacy narrative. (Required)</hint>
+         <required>We cannot display your narrative without a title. Please enter a title for your literacy narrative.</required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>created</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Date created</label>
+         <input-type>date</input-type>
+         <hint>Please provide the date on which you created your literacy narrative -- not necessarily the date
+           on which you are filling out this form. (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Description</label>
+         <input-type>textarea</input-type>
+         <hint></hint>
+         <required></required>
+       </field>
+       
+       <field>
+		     <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Subject Keywords</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find your literacy narrative, please enter appropriate subject keywords or phrases. You may enter as many as you like, but you
+           should enter only one keyword or phrase at a time, then click "Add More" to enter additional keywords. (Optional)</hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>coverage</dc-element>
+         <dc-qualifier>period</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Decades covered</label>
+         <input-type value-pairs-name="decades">dropdown</input-type>
+         <hint>Please indicate the decades referred to in your literacy narrative. You can choose as many as necessary,
+           but you may need to hold down the Shift or CTRL key to select multiple choices. (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>coverage</dc-element>
+         <dc-qualifier>nationality</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Nationality</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find narratives by people of a particular nationality,
+           please list your nationality/nationalities during the period referred to in your narrative. (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>coverage</dc-element>
+         <dc-qualifier>region</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Region</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find narratives from particular regions (e.g., New England, Rocky Mountains,
+           Great Plains) please list the region(s) in which the events described in your narrative took place. (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>coverage</dc-element>
+         <dc-qualifier>stateprovince</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>State or Province</label>
+         <input-type>onebox</input-type>
+         <hint>To help other DALN users find narratives from your state or province,
+           please list the state(s) or province(s) in which the events described in your narrative took place. (Optional)</hint>
+         <required></required>
+       </field>
+       
+       <field>
+		     <dc-schema>dc</dc-schema>
+         <dc-element>coverage</dc-element>
+         <dc-qualifier>spatial</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Other Geographical Information</label>
+         <input-type>onebox</input-type>
+         <hint>Please provide any further description of the places referred to in your narrative that you
+           consider important (e.g., urban, suburban, rural, inner-city Detroit). (Optional)</hint>
+         <required></required>
+       </field>
+
+       <field>
+		     <dc-schema>dc</dc-schema>
+         <dc-element>language</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Language</label>
+         <input-type>onebox</input-type>
+         <hint>Please enter the language(s) used or referred to in your literacy narrative. (Optional)</hint>
+         <required></required>
+       </field>
+
+     </page>
+
+<!-- The custom Creative Commons routine will populate the dc.rights.uri field. -->
+
+   </form>
+
+ </form-definitions>
+
+ <!-- form-value-pairs populate dropdown and qualdrop-value lists.          -->
+ <!-- The form-value-pairs element holds child elements named 'value-pairs' -->
+ <!-- A 'value-pairs' element has a value-pairs-name and a dc-term          -->
+ <!-- attribute. The dc-term attribute specifies which to which Dublin Core -->
+ <!-- Term this set of value-pairs applies.                                 -->
+ <!-- A value-pair contains one 'pair' for each value displayed in the list -->
+ <!-- Each pair contains a 'displayed-value' element and a 'stored-value'   -->
+ <!-- element. A UI list displays the displayed-values, but the program     -->
+ <!-- stores the associated stored-values in the database.                  -->
+
+ <form-value-pairs>
+   
+   <value-pairs value-pairs-name="consent" dc-term="rights_consent">
+     <pair>
+       <displayed-value>Adult</displayed-value>
+       <stored-value>adult</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Under-18</displayed-value>
+       <stored-value>under-18</stored-value>
+     </pair>
+   </value-pairs>
+   
+   <value-pairs value-pairs-name="DALNSites" dc-term="dc_contributor_institution">
+     <pair>
+       <displayed-value>Other location</displayed-value>
+       <stored-value>other</stored-value>
+       <displayed-value>OSU-Columbus</displayed-value>
+       <stored-value>osu_columbus</stored-value>
+     </pair>     
+   </value-pairs>
+   
+   <value-pairs value-pairs-name="decades" dc-term="dc_coverage_period">
+     <pair>
+       <displayed-value>1900-1909</displayed-value>
+       <stored-value>1900-1909</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1910-1919</displayed-value>
+       <stored-value>1910-1919</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1920-1929</displayed-value>
+       <stored-value>1920-1929</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1930-1939</displayed-value>
+       <stored-value>1930-1939</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1940-1949</displayed-value>
+       <stored-value>1940-1949</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1950-1959</displayed-value>
+       <stored-value>1950-1959</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1960-1969</displayed-value>
+       <stored-value>1960-1969</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1970-1979</displayed-value>
+       <stored-value>1970-1979</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1980-1989</displayed-value>
+       <stored-value>1980-1989</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>1990-1999</displayed-value>
+       <stored-value>1990-1999</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>2000-2009</displayed-value>
+       <stored-value>2000-2009</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>2010-2019</displayed-value>
+       <stored-value>2010-2019</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>2020-2029</displayed-value>
+       <stored-value>2020-2029</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>2030-2039</displayed-value>
+       <stored-value>2030-2039</stored-value>
+     </pair>     
+   </value-pairs>
+      
+   <value-pairs value-pairs-name="gift" dc-term="dc_rights">
+     <pair>
+       <displayed-value>Deed of Gift</displayed-value>
+       <stored-value>deed_of_gift</stored-value>
+     </pair>     
+   </value-pairs>
+
+ </form-value-pairs>
+
+</input-forms>

@@ -1,0 +1,16 @@
+#skiplinks,#banner_wrap,#header,#topLineNav,#lftNavHold,#pageTop,#footerNav,#footerNav_wrap,#footerNav_first,#privateHold,#rhtNavHead,#rhtNav{
+	display:none;
+}
+
+#pageTitle{
+	font-size: 25px;
+	font-weight: 900;
+}
+
+#dateModified,#copyrightHold{
+	font-size: 10px;
+}
+
+table{
+	width:7in
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="keywords" content="flv, player, flash, video, generator" />
+        <meta name="author" content="neolao" />
+        <meta name="description" lang="fr" content="Lecteur de fichiers vidéos au format FLV, destiné à la diffusion par internet." />
+        <meta name="description" lang="en" content="Video player for FLV file, intended for the diffusion on websites." />
+        
+        <link rel="stylesheet" type="text/css" href="/style/style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/style/print.css" media="print" />
+        <meta name="verify-v1" content="D3yzpd4WjtC849bV5XOLJVDLtpsyHyQawW13jnxkO10=" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+        <title>
+        FLV Player - Players - MAXI - Documentation        </title>
+    </head>
+    <body>
+        <div id="header">
+            <div id="access">
+                <ul>
+                    <li><a href="/accessibility/" accesskey="0" title="Accessibility policy">accessibility</a></li>
+                    <li><a href="#body" accesskey="s" title="Go to the content">content</a></li>
+                    <li><a href="/sitemap/" accesskey="3" title="Go to the site map">site map</a></li>
+                    <li><a href="/contact/" accesskey="7" title="Go to the contact page">contact</a></li>
+                </ul>
+            </div>
+            <h1><img src="/style/images/title_en.png" alt="FLV Player"/></h1>
+        </div>
+        <div id="nav">
+            <ul>
+                <li class="home"><a accesskey="1" href="/">Home</a></li>
+                <li class="players selected"><a href="/players/">Players</a></li>
+                <li class="help"><a href="/help/">Help</a></li>
+            </ul>
+        </div>
+        <div id="subnav">
+            <p>Type: </p>
+            <ul>
+                <li><a href="/players/mini/" >MINI</a></li>
+                <li><a href="/players/normal/" >NORMAL</a></li>
+                <li><a href="/players/maxi/" class="selected">MAXI</a></li>
+                <li><a href="/players/multi/" >MULTI</a></li>
+                <li><a href="/players/js/" >JS</a></li>
+            </ul>
+        </div>
+        <div id="body">
+            <div id="sidebar">
+                <ul>
+                    <li><a href="/players/maxi/preview/"  >Preview</a></li>
+                    <li><a href="/players/maxi/documentation/"  class="selected">Documentation</a></li>
+                    <li><a href="/players/maxi/generator/"  >Generator</a></li>
+                    <li><a href="/players/maxi/download/"  >Download</a></li>
+                    <li><a href="/players/maxi/plugins/"  >Plugins</a></li>
+                    <li><a href="/players/maxi/license/"  >License</a></li>
+                </ul>
+            </div>
+            <h2>Documentation</h2>
+            
+            <h3>Example</h3>
+            <p class="level3">Here is an example of HTML usage of the player:</p><pre class="code level3">&lt;object type="application/x-shockwave-flash" data="player_flv_maxi.swf" width="320" height="240"&gt;
+     &lt;param name="movie" value="player_flv_maxi.swf" /&gt;
+     &lt;param name="FlashVars" value="flv=test.flv" /&gt;
+&lt;/object&gt;</pre><p class="level3">In this example, the size of the video is not set. The size of the player is 320 by 240. If you change these parameters, the video size will also change.</p>            
+            <h3>Parameters</h3>
+            <table class="level3" summary="Player parameters">
+                <thead>
+                    <tr><th>Name</th><th>Description</th></tr>
+                </thead>
+                <tfoot>
+                    <tr><td>Parameter name</td><td>Parameter description</td></tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td class="name">flv</td>
+                        <td>The URL of the FLV video to be played.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">width</td>
+                        <td>Forces the video width.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">height</td>
+                        <td>Forces the video height.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">autoplay</td>
+                        <td><code>1</code> to auto-play</td>
+                    </tr>
+                    <tr>
+                        <td class="name">autoload</td>
+                        <td><code>1</code> to automatically load</td>
+                    </tr>
+                    <tr>
+                        <td class="name">buffer</td>
+                        <td>The number of seconds to buffer. By default set to <code>5</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">buffermessage</td>
+                        <td>The buffering message. By default <code>Buffering _n_</code>, <code>_n_</code> shown in percent.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">buffercolor</td>
+                        <td>The color of the buffering message</td>
+                    </tr>
+                    <tr>
+                        <td class="name">bufferbgcolor</td>
+                        <td>The background color of the buffering message</td>
+                    </tr>
+                    <tr>
+                        <td class="name">buffershowbg</td>
+                        <td><code>0</code> to hide the background color of the buffering message</td>
+                    </tr>
+                    <tr>
+                        <td class="name">config</td>
+                        <td>The URL of the configuration text file, similar to <a href="/medias/flv_config_maxi.txt">flv_config_maxi.txt</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name">configxml</td>
+                        <td>The URL of the configuration XML file, similar to <a href="/medias/flv_config_maxi.xml">flv_config_maxi.xml</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name">title</td>
+                        <td>The title shown before loading the video</td>
+                    </tr>
+                    <tr>
+                        <td class="name">titlesize</td>
+                        <td>The size of the title's font. By default set to <code>20</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">titlecolor</td>
+                        <td>The color of title. By default set to <code>ffffff</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">margin</td>
+                        <td>The margin of the video with respect to the Flash object. (useful for skins).</td>
+                    </tr>
+                    <tr>
+                        <td class="name">srt</td>
+                        <td><code>1</code> to use SRT subtitles (the file must be at the same place as the video and have the same name, with .srt extension)</td>
+                    </tr>
+                    <tr>
+                        <td class="name">srtcolor</td>
+                        <td>The color of subtitles</td>
+                    </tr>
+                    <tr>
+                        <td class="name">srtbgcolor</td>
+                        <td>The background color of subtitles</td>
+                    </tr>
+                    <tr>
+                        <td class="name">srtsize</td>
+                        <td>Size of the subtitle's font. By default set to <code>11</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showstop</td>
+                        <td><code>1</code> to show the STOP button.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showvolume</td>
+                        <td><code>1</code> to show the VOLUME button.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showtime</td>
+                        <td><code>1</code> to show the TIME button, <code>2</code> to show the remaining time by default</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showplayer</td>
+                        <td>Player bar display mode : <code>autohide</code>, <code>always</code> or <code>never</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showloading</td>
+                        <td>Loading bar display mode : <code>autohide</code>, <code>always</code> or <code>never</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showfullscreen</td>
+                        <td><code>1</code> to show fullscreen button (requires Flash Player 9.0.16.60 or newer)</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showswitchsubtitles</td>
+                        <td><code>1</code> to show the button showing/hiding subtitles</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showmouse</td>
+                        <td>Display of the mouse cursor : <code>always</code>, <code>autohide</code>, <code>never</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">loop</td>
+                        <td><code>1</code> to loop.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">startimage</td>
+                        <td>The URL of the JPEG file (not progressive) to be shown before loading the video</td>
+                    </tr>
+                    <tr>
+                        <td class="name">skin</td>
+                        <td>The URL of the JPEG file (not progressive) to load</td>
+                    </tr>
+                    <tr>
+                        <td class="name">playercolor</td>
+                        <td>The background color of the player bar (not the flash)</td>
+                    </tr>
+                    <tr>
+                        <td class="name">loadingcolor</td>
+                        <td>The color of loading bar</td>
+                    </tr>
+                    <tr>
+                        <td class="name">bgcolor</td>
+                        <td>The background color</td>
+                    </tr>
+                    <tr>
+                        <td class="name">bgcolor1</td>
+                        <td>The first color of the background gradient</td>
+                    </tr>
+                    <tr>
+                        <td class="name">bgcolor2</td>
+                        <td>The second color of the background gradient</td>
+                    </tr>
+                    <tr>
+                        <td class="name">buttoncolor</td>
+                        <td>The color of the buttons</td>
+                    </tr>
+                    <tr>
+                        <td class="name">buttonovercolor</td>
+                        <td>Hover color of buttons</td>
+                    </tr>
+                    <tr>
+                        <td class="name">slidercolor1</td>
+                        <td>The first color of the bar gradient</td>
+                    </tr>
+                    <tr>
+                        <td class="name">slidercolor2</td>
+                        <td>The second color of the bar gradient</td>
+                    </tr>
+                    <tr>
+                        <td class="name">sliderovercolor</td>
+                        <td>Hover color of the bar</td>
+                    </tr>
+                    <tr>
+                        <td class="name">loadonstop</td>
+                        <td><code>0</code> to stop the video loading by cliking on STOP button</td>
+                    </tr>
+                    <tr>
+                        <td class="name">onclick</td>
+                        <td>The destination URL when clicking on the video. By default <code>playpause</code>, meaning that the video is played/paused on click. To remove events, set to <code>none</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">onclicktarget</td>
+                        <td>The target of the URL when clicking on the video. By default <code>_self</code>. To open a new window set to <code>_blank</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">ondoubleclick</td>
+                        <td>Action on double click: <code>none</code>, <code>fullscreen</code>, <code>playpause</code>, or the URL to open.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">ondoubleclicktarget</td>
+                        <td>The target of the URL when double clicking on the video. By default <code>_self</code>. To open a new window set to <code>_blank</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">playertimeout</td>
+                        <td>The timeout in milliseconds before the player hides (when <code>autohide</code> mode is set). By default set to <code>1500</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">videobgcolor</td>
+                        <td>Background color of the flash, when no video is shown.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">volume</td>
+                        <td>The initial volume, between <code>0</code> and <code>200</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">shortcut</td>
+                        <td><code>0</code> to deactivate keyboard shortcuts.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">playeralpha</td>
+                        <td>The transparency of the player bar, between <code>0</code> and <code>100</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">phpstream</td>
+                        <td><code>1</code> to use php stream</td>
+                    </tr>
+                    <tr>
+                        <td class="name">srturl</td>
+                        <td>L'URL of the subtitles file (if you don't want the automatic detection)</td>
+                    </tr>
+                    <tr>
+                        <td class="name">top1</td>
+                        <td>Load an image over the video and place it at the coordinate <code>x</code> and <code>y</code> (for example <code>url|x|y</code>)</td>
+                    </tr>
+                    <tr>
+                        <td class="name">netconnection</td>
+                        <td>RTMP server url</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showiconplay</td>
+                        <td><code>1</code> to show the PLAY icon in the middle of the video.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">iconplaycolor</td>
+                        <td>The color of the PLAY icon.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">iconplaybgcolor</td>
+                        <td>The background color of the PLAY icon.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">iconplaybgalpha</td>
+                        <td>The transparency of the PLAY icon between <code>0</code> and <code>100</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="name">showtitleandstartimage</td>
+                        <td><code>1</code> to show the title and the startimage at the same time.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Keyboard shortcuts</h3>
+            <table class="level3" summary="Player shortcuts">
+                <thead>
+                    <tr><th>Key</th><th>Description</th></tr>
+                </thead>
+                <tfoot>
+                    <tr><td>Key</td><td>Description</td></tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td class="key"><kbd>space</kbd></td>
+                        <td>Play/Pause</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>P</kbd></td>
+                        <td>Play/Pause</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>S</kbd></td>
+                        <td>Stop</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>C</kbd></td>
+                        <td>Show/Hide subtitles</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>F</kbd></td>
+                        <td>Fullscreen mode</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>left</kbd></td>
+                        <td>5 seconds backward</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>right</kbd></td>
+                        <td>5 seconds forward</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>up</kbd></td>
+                        <td>Volume up</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>down</kbd></td>
+                        <td>Volume down</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>+</kbd></td>
+                        <td>Volume up</td>
+                    </tr>
+                    <tr>
+                        <td class="key"><kbd>-</kbd></td>
+                        <td>Volume down</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Javascript</h3>
+            <p class="level3">To control the player with Javascript, it is necessary to add an <code>id</code> in the <code>&lt;object&gt;</code> tag, in order to identify the Flash.</p><p class="level3">These are the available actions:</p>            <pre class="code level3">
+// PLAY
+document.getElementById("myFlash").SetVariable("player:jsPlay", "");
+
+// PAUSE
+document.getElementById("myFlash").SetVariable("player:jsPause", "");
+
+// STOP
+document.getElementById("myFlash").SetVariable("player:jsStop", "");
+
+// Pour modifier le volume
+document.getElementById("myFlash").SetVariable("player:jsVolume", "50");
+
+// Pour modifier l'url du FLV (il faut faire un play ensuite)
+document.getElementById("myFlash").SetVariable("player:jsUrl", "http://my.flv");
+
+// Pour modifier l'image de départ
+document.getElementById("myFlash").SetVariable("player:jsStartImage", "foo.jpg");
+
+// Pour se déplacer dans la vidéo, en seconde
+document.getElementById("myFlash").SetVariable("player:jsSetPosition", "234"); 
+            </pre>
+
+            <div id="bodyfooter"></div>
+<div class="pub">
+<h2>Pub</h2>
+    <script type="text/javascript"><!--
+    google_ad_client = "pub-3286570802435209";
+    google_ad_width = 728;
+    google_ad_height = 15;
+    google_ad_format = "728x15_0ads_al";
+    google_ad_channel = "4405669218+1738576225+6898132577+5360634285";
+    google_color_border = "F5F5F5";
+    google_color_bg = "F5F5F5";
+    google_color_link = "666699";
+    google_color_text = "000000";
+    google_color_url = "008000";
+    //-->
+    </script>
+    <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+    
+	<ul>
+		<li style="width:24%;"><a href="http://www.conrad.fr/webapps/informatique_et_bureautique.html">Informatique et Bureautique</a></li>
+	</ul>
+</div>
+
+        </div>
+        <div id="footer">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <p class="infos">
+                <a class="neolao" href="http://www.neolao.com">neolao production</a> | 
+                <a href="/credits/">Credits</a> |
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="submit" name="submit" value="Make a donation" />
+                <img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" />
+            </p>
+            <p>
+                <a href="/fr/players/maxi/documentation/">Version Française</a>            </p>
+            </form>
+        </div>
+        <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-2258619-4");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+        </script>
+    </body>
+</html>

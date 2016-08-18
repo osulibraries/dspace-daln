@@ -1,0 +1,43 @@
+
+div#ds-main {
+overflow: visible;
+}
+
+div#ds-user-box {
+top: -10px;
+}
+
+#ds-header #lmsLogo {
+top: 38px;
+}
+
+#ds-header .topnav {
+left: -5px;
+top: 52px;
+}
+
+ul#ds-trail {
+top: 55px;
+}
+
+#ds-search-form {
+margin: 0px;
+}
+
+#ds-options li h4 {
+margin-top: 15px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~Secondary Page Style Rules~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+fieldset.ds-form-list ol li {
+margin-bottom: 10px;
+width: 100%;
+}
+
+span.field-help {
+display: block;
+}

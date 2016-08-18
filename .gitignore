@@ -1,0 +1,10 @@
+.svn/
+target/
+
+*.new
+*.save
+*.default
+*.old
+*.test
+*.original
+*.orig

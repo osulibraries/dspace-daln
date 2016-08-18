@@ -1,0 +1,1764 @@
+/*
+  style.css
+
+  Version: $Revision: 1.15 $
+ 
+  Date: $Date: 2006/07/27 22:54:53 $
+ 
+  Copyright (c) 2002-2005, Hewlett-Packard Company and Massachusetts
+  Institute of Technology.  All rights reserved.
+ 
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+ 
+  - Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+ 
+  - Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+ 
+  - Neither the name of the Hewlett-Packard Company nor the name of the
+  Massachusetts Institute of Technology nor the names of their
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+ 
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+  OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+  DAMAGE.
+*/
+
+
+/* reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/*
+body {
+	line-height: 1;
+}
+*/
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* now our stuff */
+body {
+  background-color: #a75;
+  color: black;
+  font-family: "DejaVu Sans", "DejaVu LGC Sans", Calibri, Arial, sans-serif;
+}
+
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  color: #000040;
+  margin-left: 0;
+}
+
+h1 {
+  	font-size: 180%;
+}
+
+h2 {
+	font-size: 150%;
+}
+
+h3, h4 {
+	font-size: 120%;
+}
+
+/* anchors */
+a:link {
+  	color: #007;
+}
+a:visited {
+  	color: #049;
+}
+a:active {
+  background: #006;
+  color: white;
+}
+a:hover {
+  background: #eee;
+  color: #006;
+}
+
+/* paragraph */
+p {
+    margin: 6px 6px 6px 2px;
+}
+
+p.hidden {
+    display: none;
+}
+
+
+/* lists */
+ul {
+  margin: 1em 0em 1em 2em;
+}
+ul ul {
+  margin-left: 1.5em;
+}
+ul ol {
+  margin-left: 1.5em;
+}
+ol {
+  margin-left: 2em;
+}
+ol ol {
+  margin-left: 1.5em;
+}
+dd  {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+dt  {
+  margin-top: 0.5em;
+  margin-bottom: 0
+  }
+
+/* highlighting */
+span.bold {
+	font-weight: bold;
+}
+
+span.italics,span.italic {
+	font-style: italic;
+}
+
+span.underline {
+	text-decoration: underline;
+}
+
+span.fade {
+    color: gray;
+    font-size: 90%;
+}
+
+span.fade a {
+    color: gray;
+    text-decoration: none;
+}
+
+span.fade a:hover {
+    color: blue;
+    text-decoration: underline;
+}    
+
+span.warn {
+    color: red;
+    font-weight: bolder;
+}
+
+img { 
+	border: none;
+}
+
+fieldset {
+	border: 0px;	
+	margin: 0 2px;
+	padding: 4px 8px 10px;
+}
+
+.rounded {
+     -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/* now our specific stuff */
+
+body.noheader {
+  background: white !important;
+}
+
+
+.newsflash {
+  background: #FFFFA0;
+  color: black;
+}
+p.newsflash {
+  padding: 2px;
+  border: 1px solid #666;
+  text-align: left;
+}
+a.newsflash {
+  color: #03C;
+  background: #FFFFA0;
+}
+div.indent {
+  margin-left: 5%;
+}
+div.mainindent {
+  margin-left: 8%;
+  margin-right: 6%;
+}
+  
+address {
+  margin-left: 3%;
+}
+select.main_nav option {
+  color: white;
+  background: #006;
+}
+
+hr.bottom_divider {
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+table.tabs td.tab {
+  background: #E0E0CA;
+  color: black;
+  text-align: center;
+}
+
+p.toplogo {
+  text-align: right;
+  margin: 0;
+}
+
+p.skipper {
+  font-size: .2em;
+  visibility: hidden;
+  display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: white;
+}
+
+p.skipper a:link {
+  color: white;
+  background: white;
+  text-decoration: none ! important;
+}
+
+/* main division */
+div#ds-main {
+	position: relative;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	padding: 0;
+}
+
+/* Header / banner */
+div#ds-header {
+	width: 100%;
+	padding: 0px;
+}
+
+table#ds-banner {
+	background-color: white;
+}
+
+table#ds-banner td {
+	width: 33%;
+}
+
+table#ds-banner td#right-links {
+	vertical-align: top;
+}
+
+div#ds-header a {
+	text-decoration: none;
+}
+
+div#ds-header a img {
+	float: left;
+}
+
+div#ds-header a:hover {
+	text-decoration: none;
+}
+
+div#ds-header h1,div#ds-header h2 {
+	display: none;
+}
+
+
+/* trail */
+
+div#ds-trail {
+	position: relative;
+	background-color: #F0E8C8;
+	height: auto;
+	line-height: 28px;
+	margin-top: 5px;
+}
+
+div#ds-trail ul {
+	text-indent: -15px;
+	padding-left: 18px;
+	margin: 0px 0px 0px 2px;
+	width: 715px;
+}
+
+li.ds-trail-link {
+	overflow: hidden;
+	display: inline;
+	background: url("images/arrow-right-black.gif") no-repeat scroll 2% 60%;
+	margin-left: 3px;
+	padding-left: 13px;
+	margin-top: 2px;
+	font-weight: 200;
+	max-width: 400px;
+	line-height: 20px;
+	white-space: nowrap;
+}
+
+li.first-link {
+	list-style: none;
+	background-image: none;
+	padding-left: 0;
+}
+
+div#ds-trail div#ds-search {
+	float: right;
+	border-right: none;
+	width: auto;
+}
+
+div#ds-trail div#ds-search div {
+	position: relative;
+	top: -2px;
+}
+
+div#ds-trail div#ds-search form {
+	display: inline;
+	height: 22px;
+}
+
+div#ds-trail div#ds-search fieldset {
+	display: inline;
+	padding: 0px 4px;
+}
+
+div#ds-trail div#ds-search input.ds-text-field {
+	width: 120px;
+	height: 16px;
+	position: relative;
+	top: -1px;
+}
+
+div#ds-trail div#ds-search input.ds-button-field {
+	width: auto;
+	height: 24px;
+	margin: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+/* User box */
+/*
+div#ds-user-box {
+    width: 300px;
+	position: absolute;
+	top: 10px;
+	left: 555px;
+	text-align: left;
+}
+
+div#ds-user-box p {
+	font-size: 90%;
+	color: gray;
+	height: 12px;
+	padding: 0px;
+	margin: 0px;
+}
+
+div#ds-user-box a {
+	text-decoration: none;
+	color: gray;
+	height: 12px;
+	padding: 0px;
+	margin: 0px;
+}
+
+div#ds-user-box a:hover {
+	text-decoration: underline;
+}
+*/
+
+/*** Horizontal menu ***/
+
+div#ds-menu {
+	background-color:  #FED;
+	height:28px;
+	position:relative;
+	text-align:left;
+	z-index: 1;
+	margin-top: 5px;
+}
+
+/* all menus */
+div#ds-menu ul {
+	background-color:  #FED;
+	margin: 0;
+}
+
+/* all items */
+div#ds-menu li {
+	float:left;
+	position:relative;
+}
+
+/* top-level menu */
+div#ds-menu ul.toplevel {
+}
+
+/* top-level items */
+div#ds-menu ul.toplevel > li {
+	border-right: 1px solid black;
+	width: 128px;
+	height: 28px;
+	line-height: 28px;
+}
+
+/* default (invisible) for sub-menus */
+div#ds-menu ul ul {
+	position: absolute;
+	left: -9999px
+}
+
+/* sneaky IE6 thing */
+/* not used
+div#ds-menu table {
+	border-collapse:collapse;
+	height:0;
+	left:-1px;
+	position:absolute;
+	top:-1px;
+	width:0;
+}
+*/
+
+/* menu items */
+div#ds-menu ul li {
+	float: left;
+}
+
+/* menu item links */
+div#ds-menu ul li a {
+	display:block;
+	padding-left: 8px;
+	padding-right:10px;
+	text-decoration:none;
+}
+
+/* top-level drop down */
+div#ds-menu ul li a.drop {
+	background: url("images/arrow-down-black.gif") no-repeat 94%; 
+}
+
+/* sub-menus */
+div#ds-menu ul ul {
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+/* sub-menu items */
+div#ds-menu ul ul li {
+	border-bottom: 1px solid black;
+	width: 100%;
+}
+
+/* sub-menu item links */
+div#ds-menu ul ul li a {
+	width: 126px;
+}
+
+/* sub-menu item links (with arrow) */
+div#ds-menu ul ul li a.drop {
+	background: url("images/arrow-right-black.gif") no-repeat 99%; 	
+	padding-right: 10px;
+}
+
+/* sub-menu item links (with arrow) */
+div#ds-menu ul ul li:hover a.drop {
+	background-color: #FFF;
+}
+
+/* while hovering */
+div#ds-menu ul li:hover {
+	position:relative;
+}
+
+/* hovering over the item itself */
+div#ds-menu ul li a:hover {
+	background-color: #FFF;
+	position:relative;
+}
+
+/* hovering over a child of the item */
+div#ds-menu ul li:hover > a {
+	background-color: #FFF;
+}
+
+div#ds-menu ul.toplevel > li:first-child > a:hover {
+     -moz-border-radius: 8px 0 0 8px;
+    -webkit-border-radius: 8px 0 0 8px;
+    -khtml-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px;
+}
+div#ds-menu ul.toplevel > li:first-child:hover > a {
+     -moz-border-radius: 8px 0 0 8px;
+    -webkit-border-radius: 8px 0 0 8px;
+    -khtml-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+
+/* first-level drop-down (active) */
+div#ds-menu ul :hover ul {
+	left: 0;
+	top: 28px;
+	width: 144px;
+}
+
+/* further levels of fly-out (extend as needed) */
+div#ds-menu ul :hover ul :hover ul, div#ds-menu ul :hover ul :hover ul { 
+	left: 144px;
+	top: 0;
+	width: 144px;
+}
+
+/* further levels of fly-out (inactive) (extend as needed) */
+div#ds-menu ul :hover ul ul, div#ds-menu ul :hover ul ul { 
+	left: -9999px;
+}
+
+
+
+
+/*** END Horizontal menu ***/
+
+/*** Body ***/
+
+div#ds-container {
+	position: relative;
+	float: right;
+	width: 980px;
+	color: inherit;
+	margin-top: 5px;
+}
+
+div#ds-body {
+	padding: 1px 5px 1px;
+	margin-bottom: 5px;
+	width: 715px;
+	background-color: white;
+}
+
+/*Lynna: changed font size from 1.5em to 1.3em  because of the links to other DRC-s on the top page from news-xmului.xml
+	5/2008 JRD Reduced font size to 150% */
+div#ds-body h1 {
+	font-size: 180%;
+	padding: 15px 0 0 0;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-weight: inherit;
+}
+
+div#ds-body h2 {
+	font-size: 150%;
+	padding: 10px 0 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: inherit;
+}
+
+div#ds-body h3 {
+	padding: 5px 0 0 0;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+div#ds-body h4 {
+	padding: 0 0 0 0;
+	margin-top: 0px;
+}
+
+div#ds-body > h1, div#ds-body > h2 div#ds-body > h3 div#ds-body > h4 {
+	padding-top: 5px;
+}
+
+ul.ds-progress-list {
+	margin: 0 0 10px 0;
+	padding: 2px 0px;
+	text-align: center;
+}
+
+
+ul.ds-progress-list li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	border:  inherit;
+	overflow: hidden;
+	display: inline;
+	padding: 4px 3px;
+	margin-top: 2px;
+	margin-left: 3px;
+	max-width: 400px;
+	line-height: 20px;
+}
+
+ul.ds-progress-list li.button {
+	background-color: inherit;
+	border: none;
+	padding: 1px !important;
+	margin-top: 2px;
+	margin-left: 0px !important;
+}
+
+ul.ds-progress-list li.button input.ds-button-field {
+	font-size: smaller;
+}
+
+ul.ds-progress-list li.current.button input.ds-button-field {
+	color:  inherit;
+}
+
+ul.ds-progress-list li.current {
+	color:  inherit;
+	background-color: inherit;
+	border-color:  inherit;
+}
+
+ul.ds-progress-list li.arrow {
+	border: none;
+	background: none;
+	font-size: 120%;
+	font-weight: normal;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+/* Alphabetical list jumps when browsing by title, author, etc. */
+ul.alphabet {
+	padding-left: 10px;
+	padding-top: 0px;
+	margin: 5px 0px 0px 0px;
+	text-align: center;
+}
+
+ul.alphabet li {
+	list-style: none;
+	display: inline;
+	margin-right: 5px;
+	font-weight: 200;
+}
+
+ul.alphabet a {
+	font-weight: 600;
+	color: inherit;
+	background-color: inherit;
+}
+
+ul.alphabet a:hover {
+	font-weight: 600;
+	color: inherit;
+	background-color: inherit;
+}
+
+/*
+form.search {
+	margin: 0px;
+	padding: 0px;
+}
+
+form.search select {
+	max-width: 200px;
+}
+
+*.collection.search-browse,*.community.search-browse {
+	width: 340px;
+	float: left;
+	margin: 5px 12px 5px 0px;
+}
+
+form.search fieldset,form.navigation fieldset {
+	color: inherit;
+	background-color: rgb(255, 255, 245);
+	border: 2px solid rgb(240, 240, 210);
+	padding: 5px 5px 5px 5px;
+}*/
+
+/* search form tweaks */
+form.search li {
+    margin: 0;
+    padding: 0px !important;
+}
+
+/* browse form tweaks */
+form.navigation input,form.navigation select {
+	margin-left: 5px;
+}
+
+form.navigation p {
+	text-align: center;
+}
+
+/*
+form.search table {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: none;
+}
+
+form.search table th {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+}
+*/
+
+div.browse {
+	display: none;
+}
+
+/* pagination bars for search and browse results */
+div.pagination {
+	position: relative;
+	padding: 1px 0px;
+	color: inherit;
+	background-color:  #FED;
+	border:  inherit;
+	margin: 5px 0px;
+}
+
+div.pagination * {
+	padding: 0px;
+}
+
+div.pagination-masked {
+	position: relative;
+	background-color:  #FED;
+	border:  inherit;
+	margin-bottom: 5px;
+}
+
+a.previous-page-link {
+	position: absolute;
+	left: 10px;
+	top: 6px;
+}
+
+p.pagination-info {
+    text-align: center;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+ul.pagination-links {
+	position: relative;
+	text-align: center;
+	top: -5px;
+	width: 360px;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 12px;
+}
+
+*.pagination-links li {
+	list-style: none;
+	display: inline;
+	margin-right: 5px;
+	font-weight: bolder;
+	font-size: 90%;
+}
+
+li.page-link a,li.first-page-link a,li.last-page-link a {
+	color:  inherit;
+	background-color: inherit;
+}
+
+li.current-page-link a {
+	color:  inherit;
+	background-color: inherit;
+}
+
+a.next-page-link {
+	position: absolute;
+	right: 10px;
+	top: 6px;
+	color:  inherit;
+	background-color: inherit;
+}
+/* end of pagination */
+
+/* collection details */
+div.detail-view {
+	clear: both;
+	padding: 5px 5px 5px 6px;
+}
+
+p.button-list {
+	margin-top: 3px;
+	padding-bottom: 0;
+}
+
+ul.collection-browse,ul.community-browse {
+	display: none;
+}
+
+*.collection-search-browse td,*.community-search-browse td {
+	white-space: nowrap;
+}
+
+*.collection-search-browse h4,*.community-search-browse h4 {
+	display: none;
+}
+
+*.collection-search-browse select,*.community-search-browse select {
+	width: auto;
+	max-width: 200px;
+}
+
+*.collection-search-browse input,*.community-search-browse input {
+	width: auto;
+	max-width: 195px;
+}
+
+*.button-list input {
+	width: auto;
+}
+
+/* collection logo */
+div.ds-logo-wrapper {
+    float: right;
+    padding: 5px 0px 5px 10px;
+}
+
+/* collection copyright text */
+p.copyright-text {
+	margin-top: 30px;
+	font-style: italic;
+	text-align: center;
+}
+
+/* major divisions of body */
+div.primary {
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+.primary .primary {
+	margin-bottom: 10px;
+}
+
+table {
+    clear: both;
+	border-spacing: 0px;
+	border:  inherit;
+	width: 100%;
+}
+
+tr.ds-table-header-row {
+	color: inherit;
+	background-color:  #F0E8C8;
+}
+
+tr.ds-table-header-row.subheader {
+    background-color:  #F8F0CC;
+}
+
+
+th {
+    padding: 4px 10px;
+}
+.subheader th {
+    padding-left: 5px;
+	font-weight: 100;
+}
+
+
+
+tr.ds-table-row.odd {
+	color: inherit;
+	background-color:  #FCF8E0;
+}
+
+tr.ds-table-row.even {
+	color: inherit;
+	background-color:  #FFF8F0;
+}
+
+td {
+	padding: 3px 10px 5px 10px;
+	border: none;
+	font-size: inherit;
+	background-color: inherit;
+	color: inherit;
+	vertical-align: middle;
+}
+
+*.first-cell {
+	vertical-align: middle;
+	text-align: center;
+}
+
+.indent {
+    padding-left: 35px;
+    padding-right: 0;
+}
+.doubleIndent {
+    padding-left: 55px;
+    padding-right: 0;
+}
+
+
+th.indent {
+    padding-left: 30px;
+    padding-right: 0;
+}
+th.doubleIndent {
+    padding-left: 50px;
+    padding-right: 0;
+}
+
+
+
+/* highlight a single row */
+tr.ds-table-row.highlight {
+	background-color:  #C8F0A0;
+}
+
+/* Tables that are actually a result of glossary lists are not rendered
+ as plain tables are... */
+table.ds-gloss-list {
+	border: none;
+	width: auto;
+	font-size: inherit;
+}
+
+*.ds-gloss-list td {
+	padding: 5px;
+}
+
+*.ds-gloss-list-label {
+	font-weight: bolder;
+}
+
+table.ds-gloss-list td ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Formatting associated with the "Files in this item" table in the item view */
+*.file-list td {
+	text-align: center;
+}
+
+a.image-link img {
+	border: none;
+}
+
+/* non-form-containing divisions of body */
+div.ds-static-div {
+	border: none;
+	clear: both;
+    overflow: hidden;
+}
+
+/* list of items in search and browse results, etc. */
+ul.ds-artifact-list {
+	border:  inherit;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+
+ul.ds-artifact-list li.odd {
+	background-color:  #F8F0D8;
+}
+
+ul.ds-artifact-list li.even {
+	background-color:  #FFF8F0;
+}
+
+ul.ds-artifact-list li {
+	float: left;
+	clear: both;
+	width: 100%;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+ul.ds-artifact-list li img {
+	border: 0px;
+}
+
+ul.ds-artifact-list li div.artifact-description {
+	float: left;
+	margin-top: 0px;
+	width: 73%;
+	padding: 0 5px;
+}
+
+ul.ds-artifact-list li div.artifact-title {
+	font-size: 120%;
+}
+
+ul.ds-artifact-list li div.artifact-title a:link {
+    color:  inherit;
+}
+
+ul.ds-artifact-list li div.artifact-title a:visited {
+    color:  inherit;
+}
+
+ul.ds-artifact-list li div.artifact-info {
+	margin-left: 15px;
+}
+
+ul.ds-artifact-list li span.publisher {
+	font-style: italic;
+}
+
+ul.ds-artifact-list li div.artifact-preview {
+	float: left;
+}
+/* end of artifact-list */
+
+
+/* The composite field voodoo */
+span.ds-composite-field {
+	display: table-row;
+	padding: 2px;
+}
+
+*.ds-composite-field.ds-composite-component {
+	display: table-cell;
+	text-align: left;
+	width: auto;
+	padding-right: 10px;
+}
+
+*.ds-composite-field input,*.ds-composite-field textarea,*.ds-composite-field select {
+	margin-right: 5px;
+	margin-bottom: -2px;
+}
+
+span.composite-help {
+	display: block;
+	font-size: 80%;
+	color: blue;
+	background-color: inherit;
+	text-align: left;
+}
+
+/* Checkboxes and Radio buttons */
+fieldset.ds-checkbox-field,fieldset.ds-radio-field {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+fieldset.ds-checkbox-field legend,fieldset.ds-radio-field legend {
+	display: none;
+}
+
+fieldset.ds-checkbox-field label,fieldset.ds-radio-field label {
+	display: block;
+}
+
+/* The form list and and its components voodoo */ /* Top-level stuff */
+fieldset.ds-form-list {
+	border:  inherit;
+	padding: 0 1px;
+	color: inherit;
+	background-color:  #FED;
+	margin: 0 -1px;
+}
+
+fieldset.ds-form-list.thick {
+	border-top:  inherit;
+}
+
+fieldset.ds-form-list ol {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+fieldset.ds-form-list legend {
+	color:  inherit;
+	background-color: inherit;
+	font-size: 120%;
+	font-weight: bolder;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+fieldset.thick legend {
+	color:  inherit;
+	background-color: #FFF8F0;
+	border-top:  inherit;
+	padding-left: 10px;
+	padding-right: 30px;
+}
+
+/* Top-level stuff for the nested "form" lists */
+fieldset.ds-form-sublist {
+	border:  inherit;
+	padding: 0;
+	margin: 0;
+}
+
+fieldset.ds-form-list ol {
+	list-style-type: none;
+}
+
+form.ds-interactive-div fieldset.ds-form-sublist ol {
+	display: table;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+form.ds-interactive-div fieldset.ds-form-sublist legend {
+	color:  inherit;
+	font-size: 120%;
+	font-weight: bolder;
+	padding: 10px 15px 2px;
+	background-color: inherit;
+	border: 0;
+}
+
+/* Row-level hierarchy */
+form.ds-interactive-div li.ds-form-item {
+	display: block;
+	padding: 5px 0;
+	width: 100%;
+}
+
+form.ds-interactive-div li.odd {
+	color: inherit;
+	background-color:  #FCF8E8;
+}
+
+form.ds-interactive-div li.even {
+	color: inherit;
+	background-color:  #FFF8F0;
+}
+
+form.ds-interactive-div li.ds-form-item.last {
+	border-top:  inherit;
+	color: inherit;
+	background-color:  #F8F0C8;
+}
+
+form.ds-interactive-div.primary {
+#	float: left;
+	clear: both;
+	padding: 0px 5px 5px;
+	margin: -5px -5px 5px;
+	background-color: white;
+	width: 100%;
+}
+
+fieldset ol {
+	float: left;
+	clear: both;
+}
+
+li.ds-form-item {
+	float: left;
+	clear: both;
+}
+
+div.ds-form-content {
+	float: left;
+	clear: right;
+	display: block;
+	padding: 5px;
+	width: 450px;
+}
+
+span.ds-form-label,label.ds-form-label {
+	display: block;
+	float: left;
+	clear: left;
+	padding: 5px 20px 5px 2px;
+	width: 133px;
+	font-weight: bold;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+label.ds-composite-component {
+	display: block;
+	float: left;
+	padding: 0px 5px 0 0px;
+	font-size: 80%;
+	color: blue;
+	background-color: inherit;
+	text-align: left;
+}
+
+span.error {
+	display: block;
+	font-size: 85%;
+	color: red;
+	background-color: inherit;
+	margin: 0;
+}
+
+span.field-help {
+	display: block;
+	margin-left: 1px;
+	font-size: 80%;
+	color: gray;
+	background-color: inherit;
+}
+
+input.error,textarea.error,select.error {
+	color: inherit;
+	background-color:  inherit;
+	border-color:  inherit;
+}
+
+span.composite-help {
+	display: block;
+	font-size: 80%;
+	color: gray;
+	background-color: inherit;
+	text-align: left;
+}
+
+div.spacer {
+	margin: 0;
+	padding: 0;
+	line-height: 0px;
+	clear: both;
+}
+
+div#ds-options {
+	position: relative;
+	float: left;
+	width: 152px;
+	background-color: white;
+	margin: 5px 0px 0px;
+	padding-top: 8px;
+	padding-left: 8px;
+}
+
+div.ds-option-set {
+	padding: 8px 0px 5px 0px;
+	width: 145px;
+	margin: -3px 0px 0px 0px;
+	color: inherit;
+	background-color:  inherit;
+	border:  inherit;
+}
+
+/* main search box */
+div#ds-search-option input {
+}
+
+div#ds-search-option input.ds-text-field {
+	width: 80%;
+	margin: 0;
+	margin-left: -15px;
+	padding: 0;
+	position: relative;
+	top: -1px;
+	left: 8px;
+}
+
+div#ds-search-option input.ds-button-field {
+	width: auto;
+	height: 26px;
+	margin: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	position: relative;
+	top: -1px;
+	left: 10px;
+}
+
+div#ds-search-option a {
+    position: relative;
+    top: -4px;
+    left: 4px;
+	margin: 0;
+	padding: 0;
+}
+
+form#ds-search-form {
+	font-size: 90%;
+}
+/* end main search box */
+
+
+/* sidebar menu options */
+div#ds-options h3 {
+	position: relative;
+	top: 12px;
+	left: 0px;
+	margin: 0 2px 0 0;
+	color:  inherit;
+	background-color:  inherit;
+}
+/* unused
+div#ds-options h4 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color:  inherit;
+	background-color: inherit;
+}
+
+div#ds-options ul {
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+}
+
+div#ds-options li {
+	margin-left: 15px;
+	padding: 0px;
+	color:  inherit;
+	background-color: inherit;
+}
+*/
+
+input.ds-password-field {
+	margin-right: 5px;
+}
+
+/* footer */
+div#ds-footer {
+	position: relative;
+	margin: 0px;
+	height: 5px;
+	float: left;
+	width: 100%;
+	border: solid #FFFFFF;
+	visibility: hidden;
+}
+
+/* all hidden
+span#ds-footer-logo {
+	float: left;
+	clear: both;
+	height: 80px;
+	width: 300px;
+	background-image: url("di_logo.jpg");
+	background-repeat: no-repeat;
+	background-position: 0% 30%;
+	color: inherit;
+	background-color: white;
+}
+
+div#ds-footer p {
+	width: 450px;
+	position: absolute;
+	top: -8px;
+	right: 0px;
+	text-align: right;
+	padding: 5px;
+	font-size: smaller;
+}
+
+div#ds-footer-links {
+	position: absolute;
+	top: 62px;
+	right: 0px;
+	padding-right: 5px;
+	text-align: right;
+	font-size: smaller;
+}
+
+div#ds-footer a#ds-logo-link {
+	text-decoration: none;
+}
+*/
+
+div.notice {
+	background-color:  inherit;
+	border: 1px  inherit;
+	padding: 6px;
+	text-align: center;
+	margin: 10px 30px 10px 30px;
+}
+
+div.notice.success p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color:  inherit;
+	text-align: center;
+}
+
+div.notice.failure p {
+	margin: 0;
+	padding: 0;
+	font-weight:  inherit;
+	color:  inherit;
+	text-align: center;
+}
+
+h1.ds-div-head,h2.ds-div-head,h3.ds-div-head {
+	clear: both;
+}
+
+/* License text display during submission */
+div.license-text {
+	border:  inherit;
+	background-color:  inherit;
+	padding: 20px;
+	margin: 20px;
+	margin-top: 5px;
+	font-family: monospace;
+	font-size: 125%;
+}
+
+div#NoticeTransformer_div_general-message h1.ds-div-head {
+    position: absolute;
+    top: 11px;
+    left: 42px;
+    margin: 0;
+    padding: 0 5px;
+    font-size: small;
+}    
+
+h1.ds-div-head, h2.ds-div-head, h3.ds-div-head {
+    clear:both;
+}
+
+/* System-wide alerts */
+div#ds-system-wide-alert {
+    background-color:  inherit;
+    border: 1px solid red;
+    padding: 6px;
+	margin: 10px 30px;
+    color:  red;
+}
+
+
+/* admin tabs (control panel, etc.) */
+form.administrative{
+  border: none;
+  width: inherit;
+}
+
+form.administrative fieldset{
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: auto;
+}
+form.administrative h3{
+  margin-top: 7px !important;
+  margin-left: 5px;
+  margin-bottom: 7px !important;
+}
+form.administrative table{
+  margin: 0px 0px 7px;
+  width: auto;
+}
+
+
+form#administrative_item_FindItemForm_div_find-item{
+  border: 0px;
+  margin-left: 0px;
+}
+
+/* tab bar in admin forms */
+ul.horizontal
+{
+font-weight: bold;
+list-style-type: none;
+padding: 0px;
+padding-left: 0px;
+padding-bottom: 30px;
+border-bottom:  1px solid #FED;
+border-left:  1px solid white;
+border-right:  1px solid white;
+margin: 0px;
+margin-left: -1px;
+margin-right: -1px;
+width: inherit;
+}
+
+ul.horizontal li
+{
+float: left;
+height: 26px;
+background-color:  #f8f0d8;
+margin: 2px 2px 0px 2px;
+border:  1px solid #fed;
+}
+
+
+ul.horizontal a
+{
+float: left;
+display: block;
+text-decoration: none;
+padding: 4px;
+}
+
+ul.horizontal a:hover { background:  white; text-decoration:  underline;}
+
+ul.horizontal li span.bold a
+{
+border-bottom:  1px solid white;
+background-color:  white;
+}
+
+ul.horizontal li span.bold a { color:  black;}
+
+div#institutions ul {width: 100%; float: left;}
+div#institutions a {width: 48%; float: left;}
+
+
+#banner_links {
+	float: right;
+	/*margin-top: -40px;*/
+	font-size: 82%;
+	clear: left;
+}
+
+#banner_links li {
+	padding-right:1em;
+    display: inline;
+}
+
+div.sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 250px;
+}
+
+div.sidebar > div {
+	background-color: white;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+div.sidebar > p {
+	background-color: white;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+}
+
+div.sidebar ul {
+	margin: 5px 5px 10px 5px;
+}
+
+/* featured items */
+div.sidebar ul.featured {
+	list-style: none;
+	padding-left: 0px;
+	margin: 5px 0px;
+}
+
+ul.featured li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: both;
+}
+
+ul.featured li {
+	border-top: 1px solid black;
+}
+
+ul.featured li:first-child {
+	border-top: none;
+}
+
+ul.featured p {
+	margin-left: 0px;
+	margin-right: 0px;
+	font-size: 85%;
+}
+
+ul.featured div.artifact-preview {
+	padding: 0px 12px 0px 7px;
+}
+
+ul.featured div.artifact-title {
+		font-size: 120%;
+		font-weight: bold;
+		padding-top: 5px;
+}
+
+ul.featured a img {
+		border-style: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+/* item-toggles */
+p.item-view-toggle-top {
+	border: none;
+	padding: 0px 5px 0px 5px;
+	text-align: right;
+	margin: 0px 0px 5px;
+	line-height: 22px;
+	background: white url("images/arrow-left-black.gif") no-repeat 0%;
+}
+
+p.item-view-toggle-top a {
+	text-decoration: none;
+}
+
+p.item-view-toggle-bottom {
+	position: absolute;
+	left: -9999px;
+}
+
+div.tag {
+	padding: 0px 5px;
+    background: white;
+    margin-bottom: 5px;
+}
+
+div.tag h4 {
+	margin-top: 2px;
+}
+
+div.tag div {
+	margin-bottom: 10px;
+}
+
+div.tag textarea {
+	width: 90%;
+	height: 48px;
+}
+
+/* faceted search results */
+div.facets {
+}
+
+div.sidebar h3 {
+	font-size: 150%;
+	padding-top: 5px;
+}
+
+div.facets div {
+	border: none;
+}
+
+div.facets table.tiny {
+	margin: 0 0 10px;
+	width: 100%;
+}
+
+div.facets table.tiny td, div.facets table.tiny th {
+	font-size: 75%;
+	padding: 1px;
+}	
+
+/* for input form editing */
+input.link {
+	color: #007;
+   	background-color: transparent;
+   	font-size: inherit;
+   	text-decoration: underline;
+   	border: none;
+   	cursor: pointer;
+   	font-family: inherit;
+   	display: block;
+}
+
+div.secondary td /* narrow up cell spacing to allow more horizontal text */
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/* for date range searching, limit field size */
+input.narrow {
+	width: 110px;
+}
+
+/* tiny tables for 3-column facet page */
+table.tiny {
+	clear: none;
+	float: left;
+	width: 32%;
+	margin: 0px 4px;
+}
+
+table.tiny td, table.tiny th {
+	font-size: 75%;
+	padding: 1px;
+}
+
+td ul.ds-artifact-list li div.artifact-description {
+	width: 62%;
+}

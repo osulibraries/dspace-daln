@@ -1,0 +1,7 @@
+# Wipe out the properties for all css styles in the given css file.
+# Convenient as a css template that already lists all of the styles,
+# but has no effect.
+#
+# This version only handles one file at a time
+
+perl -0777  -W -i.backup -pe 's/{[^}]*}/{}/gs' $1 

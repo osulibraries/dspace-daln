@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+-->
+
+<!-- 
+  
+  The Bulk Aspect is responsible for ...
+  
+-->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+
+  <map:components>
+    <map:transformers>
+      <map:transformer name="Navigation"          src="org.dspace.app.xmlui.aspect.bulk.Navigation"/>
+      
+      <map:transformer name="GetParameters"       src="org.dspace.app.xmlui.aspect.bulk.GetParameters"/>
+	  <map:transformer name="SelectUpload"        src="org.dspace.app.xmlui.aspect.bulk.SelectUpload"/>
+	  <map:transformer name="SelectMapfile"       src="org.dspace.app.xmlui.aspect.bulk.SelectMapfile"/>
+      <map:transformer name="DisplayResults"      src="org.dspace.app.xmlui.aspect.bulk.DisplayResults"/>
+      <map:transformer name="ParamError"          src="org.dspace.app.xmlui.aspect.bulk.ParamError"/>
+      
+    </map:transformers>
+    
+    <map:selectors>
+      <map:selector name="AuthenticatedSelector"  src="org.dspace.app.xmlui.aspect.general.AuthenticatedSelector"/>
+    </map:selectors>
+    
+    <map:matchers default="wildcard">
+      <map:matcher name="HandleTypeMatcher"       src="org.dspace.app.xmlui.aspect.general.HandleTypeMatcher"/>
+      <map:matcher name="HandleAuthorizedMatcher" src="org.dspace.app.xmlui.aspect.general.HandleAuthorizedMatcher"/>
+    </map:matchers>
+    
+  </map:components>
+  
+  <map:flow language="javascript">
+    <map:script src="bulk.js"/>
+  </map:flow>
+  
+  <map:pipelines>
+    <map:pipeline>
+      
+      <!-- Make sure the user is atleast logged in -->
+      <map:select type="AuthenticatedSelector">
+        <map:when test="eperson">
+          
+			  <map:match pattern="handle/*/*/bulk">
+			    <map:match type="request" pattern="continue">
+			      <map:call continuation="{1}"/>
+			    </map:match>
+				<map:call function="doBulk">
+				  <map:parameter name="handle" value="{1}/{2}"/>
+				</map:call>
+			  </map:match>	
+				
+              <map:generate/>
+          
+              <map:transform type="Navigation"/>
+                    
+		      <map:match pattern="handle/*/*/bulk/getParameters">
+		        <map:transform type="GetParameters"/>
+		      </map:match>
+		  
+		      <map:match pattern="handle/*/*/bulk/selectUpload">
+		        <map:transform type="SelectUpload"/>
+		      </map:match>
+		  
+		      <map:match pattern="handle/*/*/bulk/selectMapfile">
+		        <map:transform type="SelectMapfile"/>
+		      </map:match>
+		  
+		      <map:match pattern="handle/*/*/bulk/paramError">
+		        <map:transform type="ParamError"/>
+		      </map:match>
+		  
+		      <map:match pattern="handle/*/*/bulk/displayResults">
+                <map:transform type="IncludePageMeta">
+                  <map:parameter name="javascript.static#1" value="static/js/scriptaculous/prototype.js" />
+                  <map:parameter name="javascript.static#2" value="static/scripts/bulk/progress.js" />
+                  <map:parameter name="refresh.noscript#1" value="15;url=/handle/{1}/{2}/bulk?continue={flow-attribute:cont}" />
+                </map:transform>
+			    <map:transform type="DisplayResults"/>
+	          </map:match>            
+
+              <map:match pattern="handle/*/*/bulk/displayResultsDone">
+			    <map:transform type="DisplayResults"/>
+			  </map:match>              
+			  
+		  <map:serialize type="xml"/>			
+
+        </map:when>
+        <map:otherwise>
+          
+          <!-- non-authenticated users -->
+          <map:generate/>
+          
+          <!--
+              If the user is going to the bulk page and they are 
+              not logged in then ask them to login first. This will also
+              handle cases where user's sessions are timed out, after logging
+              back in they will be able to resume their flow.
+              -->
+
+          <map:match pattern="handle/*/*/bulk/*">
+            <map:act type="StartAuthentication"/>
+          </map:match>
+
+          <map:match pattern="handle/*/*/bulk">
+            <map:act type="StartAuthentication"/>
+          </map:match>
+
+          <map:serialize/>								
+          
+        </map:otherwise>
+      </map:select>				
+      
+    </map:pipeline>
+  </map:pipelines>
+  
+  
+</map:sitemap>

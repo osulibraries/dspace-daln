@@ -1,0 +1,36 @@
+html {
+text-align: center;
+}
+body {
+background-color:#ff0000;
+text-align: left;
+width:980px;
+margin: 0 auto;
+}
+div#ds-main {
+background-color:#00ff00;
+width: 100%;
+overflow: auto;
+}
+div#ds-header {
+margin-top: 5px;
+background-color:#0000ff;
+padding: 1em 0;
+}
+div#ds-body {
+background-color:#ffffff;
+float: right;
+left: 35%;
+width: 65%;
+padding: 1em 0;
+}
+div#ds-options {
+float: left;
+width: 35%;
+left: 0;
+background-color:#ffff00;
+padding: 1em 0;
+}
+div#ds-footer {
+background-color:#00ffff;
+}

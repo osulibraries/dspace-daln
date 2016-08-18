@@ -1,0 +1,107 @@
+html {
+text-align: left;
+}
+
+body {
+text-align: center;
+}
+
+div#ds-main {
+overflow: visible;
+margin: 0 auto;
+padding: 0;
+}
+
+div#ds-header {
+margin-top: 10px;
+margin-right: auto;
+margin-bottom: 0;
+margin-left: auto;
+padding-top: 1em;
+padding-right: 0;
+padding-bottom: 0;
+padding-left: 0;
+}
+
+ul#ds-trail {
+text-align: left;
+top: 50px;
+}
+
+#ds-header .topnav {
+top: 52px;
+}
+
+#ds-header #ksuLogo {
+text-align: left;
+left: 10px;
+}
+
+#ds-header #lmsLogo {
+text-align: left;
+top: 38px;
+left: 0; /* 217px; */
+}
+
+div#ds-user-box {
+left: 215px;
+top: -10px;
+}
+
+div#ds-body {
+clear: left;
+width: 500px;
+text-align: left;
+margin-top: 0;
+margin-right: 5px;
+margin-bottom: 0;
+margin-left: 0;
+}
+
+div#ds-options {
+clear: right;
+width: 160px;
+text-align: left;
+margin-top: 0;
+margin-right: 0;
+margin-bottom: 0;
+margin-left: 5px;
+}
+
+#ds-options h3 {
+margin-top: 0;
+margin-right: 0;
+margin-bottom: 15px;
+margin-left: 0;
+}
+
+#ds-options li h4 {
+font-size: 12px;
+font-weight: bold;
+}
+
+div#ds-footer {
+text-align: left;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~Secondary Page Style Rules~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+a.next-page-link {
+position: relative;
+bottom: 15px;
+left: 445px;
+font-weight: bold;
+}
+
+fieldset.ds-form-list ol li {
+margin-bottom: 10px;
+width: 100%;
+}
+
+span.field-help {
+display: block;
+}
+

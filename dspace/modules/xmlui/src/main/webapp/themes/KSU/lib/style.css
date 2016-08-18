@@ -1,0 +1,663 @@
+html {
+text-align: center;
+}
+
+body {
+background: #A8C0F2 url(../images/bg_body.gif) repeat-y scroll center center;
+color: #000000;
+font-family: Arial,Helvetica,sans-serif;
+text-align: left;
+/* width:980px; */
+margin: 0 auto;
+}
+
+a img {
+border: 0;
+}
+
+div#ds-main {
+/* background-color:#00ff00; */
+width: 772px;
+overflow: auto;
+margin: 0 auto;
+}
+
+div#ds-header {
+/* margin-top: 5px; */
+/* background-color:#0000ff; */
+background: transparent url(../images/bg_header.jpg) no-repeat scroll 0 0;
+height: 182px;
+margin: 10px auto 0;
+padding: 1em 0 0;
+width: 750px;
+}
+
+div#ds-header h1, div#ds-header h2 {
+display: none;
+}
+
+ul#ds-trail {
+position: relative;
+font-size: 11px;
+top: 30px;
+/* width: 400px; */
+}
+
+ul#ds-trail a {
+color: #999999;
+text-decoration: none;
+}
+
+li.ds-trail-link {
+display: inline;
+}
+
+span.greater-than {
+color: #999999;
+}
+
+#ds-header .topnav {
+height: 22px;
+left: -22px;
+position: relative;
+top: 19px;
+display: block;
+margin: 0 auto;
+width: 750px;
+}
+
+#ds-header .topnav ul {
+height: 22px;
+list-style-type: none;
+margin: 0 auto;
+text-align: center;
+}
+
+#ds-header .topnav li {
+padding: 0 4px;
+display: inline;
+list-style-type: none;
+margin: 0;
+}
+
+.topnav a {
+font-size: 11px;
+color: #000000;
+text-decoration: none;
+margin: 0 auto;
+height: 20px;
+padding: 4px;
+position: relative;
+top: -2px;
+}
+
+.topnav li a:hover, .topnav li a:active {
+background: #EBEFFC none repeat scroll 0 0;
+color: #6287E2;
+text-decoration: underline;
+}
+
+#ds-header .pipe {
+color: #809EE7;
+font-size: 12px;
+position: relative;
+top: -2px;
+}
+
+#ds-header #ksuLogo {
+position: absolute;
+top: 0;
+margin-left: 0;
+}
+
+#ds-header #ksuLogo a {
+display: block;
+height: 69px;
+width: 138px;
+}
+
+#ds-header #ksuLogo a p {
+display: none;
+}
+
+#ds-header #lmsLogo {
+position: relative; /* absolute; */
+top: 5px;
+display: block;
+height: 32px;
+left: 70px; /* 217px; */
+width: 600px;
+}
+
+#ds-header #lmsLogo a {
+display: block;
+height: 32px;
+width: 600;
+}
+
+#ds-header #lmsLogo a p {
+display: none;
+}
+
+div#ds-user-box {
+left: 440px;
+position: relative;
+text-align: right;
+top: -25px;
+width: 300px;
+}
+
+div#ds-user-box a {
+color: #DEEFFF;
+font-size: 11px;
+text-decoration: none;
+}
+
+div#ds-user-box a:hover {
+color: #FFFFFF;
+text-decoration: underline;
+}
+
+div#ds-body {
+background-color: #ffffff;
+font-size: 12px;
+float: right;
+/* left: 35%; */
+width: 574px;
+margin: 0 10px 0;
+/* padding: 1em 0; */
+}
+
+#ds-body a:link, #ds-body a:visited {
+color: #0033CC;
+text-decoration: none;
+}
+
+#ds-body a:hover, #ds-body a:active {
+color: #7596E5;
+text-decoration: underline;
+}
+
+#ds-body h1 {
+margin-top: 0;
+margin-bottom: 10px;
+/*display: none; */
+}
+
+h3.ds-head {
+font-size: 14px;
+}
+
+#file_news_div_news {
+margin-top: 5px;
+margin-bottom: 15px;
+}
+
+#file_news_div_news p.ds-paragraph {
+margin: 0;
+}
+
+#aspect_artifactbrowser_FrontPageSearch_div_front-page-search {
+background-color: #FEF3C6;
+border: 1px solid #3D3832;
+margin-bottom: 10px;
+padding: 5px;
+width: 500px;
+}
+
+#aspect_artifactbrowser_CommunityViewer_div_community-search-browse {
+background-color: #FEF3C6;
+border: 1px solid #3D3832;
+padding: 5px;
+}
+
+#aspect_artifactbrowser_CommunityViewer_div_community-view {
+margin-top: 10px;
+}
+
+#aspect_artifactbrowser_CommunityViewer_p_search-query {
+margin-bottom: 0;
+}
+
+#aspect_artifactbrowser_CommunityViewer_div_community-search {
+margin-top: 10px;
+}
+
+#aspect_artifactbrowser_CommunityViewer_div_community-search p.ds-paragraph {
+margin-top: 0;
+}
+
+#aspect_artifactbrowser_CommunityViewer_list_community-browse {
+margin: 0 0 5px 0;
+}
+
+#aspect_artifactbrowser_CommunityViewer_div_community-browse {
+display: none;
+}
+
+#aspect_artifactbrowser_CollectionViewer_div_collection-browse {
+display: none;
+}
+
+div.ds-logo-wrapper {
+float: right;
+}
+
+div#ds-options {
+float: left;
+width: 160px;
+/* height: 100%; */
+/* overflow: auto; */
+/* left: 0; */
+background: #EDF2FC none repeat scroll 0 0;
+border: 1px solid #999999;
+margin-left: 10px;
+padding: 3px;
+}
+
+#ds-options fieldset {
+padding: 3px;
+margin: 0;
+border: 0;
+}
+
+#ds-options fieldset input {
+font-size: 90%;
+}
+
+#ds-options label {
+font-size: 12px;
+}
+
+#ds-options h3 {
+font-size: 14px;
+font-weight: bold;
+margin: 0;
+}
+
+#ds-options ul {
+font-size: 12px;
+margin: 0;
+padding: 0 0 0 15px;
+/* width: 143px; */
+}
+
+#ds-options li {
+/* list-style-type: none; */
+}
+
+#ds-options li h4 {
+margin-bottom: 0;
+}
+
+#ds-options a:link, #ds-options a:visited {
+color: #0033CC;
+text-decoration: none;
+}
+
+#ds-options a:hover, #ds-options a:active {
+color: #7596E5;
+text-decoration: underline;
+}
+
+#ds-search-option {
+font-size: 12px;
+margin-bottom: 10px;
+padding-bottom: 10px;
+}
+
+#aspect_artifactbrowser_Navigation_list_browse {
+margin: -12px 0 10px;
+padding-bottom: 10px;
+}
+
+#aspect_artifactbrowser_Navigation_list_account {
+margin: 5px 0 10px 0;
+padding-bottom: 10px;
+}
+
+#aspect_artifactbrowser_Navigation_list_context {
+margin: 5px 0 10px 0;
+padding-bottom: 10px;
+}
+
+#aspect_artifactbrowser_Navigation_list_administrative {
+margin: -12px 0 10px;
+}
+
+ul.ds-artifact-list {
+border: 1px solid #A2A2A2;
+float: left;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+ul.ds-artifact-list li {
+float: left;
+width: 100%;
+padding-top: 3px;
+padding-bottom: 3px;
+}
+
+ul.ds-artifact-list li.odd {
+background-color: #FBFCFD;
+}
+
+ul.ds-artifact-list li div.artifact-description {
+float: left;
+padding: 0 3px;
+width: 75%;
+}
+
+ul.ds-artifact-list li div.artifact-info {
+margin-left: 15px;
+}
+
+ul.ds-artifact-list li div.artifact-preview {
+float: left;
+}
+
+div#ds-footer {
+background-color: #FBFCFD;
+border: 1px solid #A2A2A2;
+color: #999999;
+font-size: 11px;
+width: 752px;
+/* height: 180px; */
+margin: 10px auto;
+padding: 0;
+}
+
+#ds-footer .ksu-footer-nav {
+margin: 12px 0 0;
+padding: 0;
+}
+
+#ds-footer .ksu-footer-nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+#ds-footer .ksu-footer-nav ul li {
+border-right: 1px solid #999999;
+display: inline;
+list-style-type: none;
+margin: 0;
+padding: 0 10px;
+}
+
+#ds-footer .ksu-footer-nav ul li.first {
+padding-left: 15px;
+}
+
+#ds-footer .ksu-footer-nav ul li.last {
+border-right: none;
+}
+
+#ds-footer .ksu-footer-nav a:link, #ds-footer .ksu-footer-nav a:visited {
+color: #999999;
+text-decoration: none;
+}
+
+#ds-footer .ksu-footer-nav a:hover, #ds-footer .ksu-footer-nav a:active {
+color: #6287E2;
+text-decoration: underline;
+}
+
+#ds-footer #ksu-footerLegend {
+border-top: 1px solid #999999;
+margin: 10px 6px;
+padding: 10px 0 0 10px;
+/* padding: 4px 10px; */
+}
+
+#ds-footer p {
+margin: 0 0 4px;
+padding: 0;
+}
+
+#ksu-footerLegend p.ksu-privacy a:link, #ksu-footerLegend p.ksu-privacy a:visited {
+color: #999999;
+text-decoration: underline;
+}
+
+#ksu-footerLegend p.ksu-privacy a:hover, #ksu-footerLegend p.ksu-privacy a:active {
+color: #6287E2;
+text-decoration: underline;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~Secondary Page Style Rules~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* System-Wide Alert text */
+#ds-system-wide-alert {
+color: red;
+}
+
+/* alphabetical browse lists */
+ul.alphabet {
+margin: 5px 0 0;
+padding-left: 10px;
+padding-top: 0;
+text-align: center;
+}
+
+ul.alphabet li {
+display: inline;
+font-weight: 200;
+list-style-image: none;
+/* list-style-position: outside; */
+list-style-type: none;
+margin-right: 7px;
+}
+
+/* multiple-paged paginated lists pages */
+p.pagination-info {
+text-align: center;
+margin: 0;
+clear: both;
+}
+
+a.previous-page-link {
+position: relative;
+top: 15px;
+font-weight: bold;
+float: left;
+}
+
+a.next-page-link {
+position: relative;
+bottom: 15px;
+left: 515px;
+font-weight: bold;
+}
+
+div.ds-static-div {
+clear: both;
+overflow: hidden;
+}
+
+th {
+padding: 4px 10px;
+}
+
+td {
+padding: 0 5px;
+}
+
+form.administrative table {
+width: auto;
+margin: 5px;
+}
+
+form.administrative fieldset {
+margin: 5px;
+}
+
+fieldset.ds-checkbox-field {
+border: none;
+}
+
+fieldset.ds-checkbox-field legend, fieldset.ds-radio-field legend {
+display: none;
+}
+
+fieldset.ds-form-list ol li {
+margin-bottom: 10px;
+}
+
+label.ds-form-label {
+font-weight: bold;
+}
+
+ul.pagination-links {
+text-align: center;
+margin: 0 0 -15px;
+}
+
+.pagination-links li {
+display: inline;
+list-style-type: none;
+margin-right: 5px;
+}
+
+li.current-page-link a {
+font-weight: bold;
+}
+
+/* user email registration progress list (verify > create > finish) */
+ul.ds-progress-list {
+text-align: center;
+}
+
+ul.ds-progress-list li {
+display: inline;
+}
+
+ul.ds-progress-list li.current {
+font-weight: bold;
+}
+
+span.error {
+color: red;
+display: block;
+}
+
+/* item record display pages */
+p.ds-paragraph.item-view-toggle {
+font-weight: bold;
+}
+
+table.ds-includeSet-table {
+clear: both;
+width: 100%;
+}
+
+tr.ds-table-row.even {
+background-color: #FBFCFD;
+}
+
+tr.ds-table-row.odd {
+background-color: #EDF2FC;
+}
+
+span.bold {
+font-weight: bold;
+}
+
+table.ds-table.file-list {
+clear: both;
+width: 100%;
+}
+
+tr.ds-table-header-row {
+background-color: #A8C0F2;
+}
+
+/* edit item */
+form.ds-interactive-div.primary {
+clear: both;
+float: left;
+/* margin-bottom: 10px;
+padding: 0; */
+}
+
+form.administrative {
+border-color: #9999FF;
+border-style: none solid solid;
+border-width: 0 1px 1px;
+width: inherit;
+}
+
+ul.horizontal {
+border-bottom: 1px solid #9999FF;
+border-left: 1px solid white;
+border-right: 1px solid white;
+font-weight: bold;
+list-style-type: none;
+margin: 0 -1px;
+padding: 0 0 24px;
+width: inherit;
+}
+
+ul.horizontal li {
+background-color: #FCFCE8;
+border: 1px solid #9999FF;
+float: left;
+height: 21px;
+margin: 2px 2px 0;
+}
+
+ul.horizontal a {
+display: block;
+float: left;
+padding: 4px;
+text-decoration: none;
+}
+
+ul.horizontal li span.bold a {
+color: #000000;
+background-color: white;
+border-bottom: 1px solid white;
+}
+
+li.ds-form-item {
+clear: both;
+float: left;
+}
+
+#aspect_administrative_item_EditItemMetadataForm_field_language {
+display: block;
+}
+
+#aspect_administrative_item_EditItemMetadataForm_field_submit_add {
+display: block;
+clear: left;
+}
+
+/* item submission workflow */
+ul.ds-progress-list li.current.button input.ds-button-field {
+color: #0AAF0A;
+}
+
+#aspect_submission_StepTransformer_list_submit-describe li {
+padding: 5px;
+}
+
+#aspect_submission_StepTransformer_list_submit-describe li.ds-form-item.even {
+background-color: #EDF2FC;
+}
+
+label.ds-composite-component {
+background-color: inherit;
+color: blue;
+display: block;
+float: left;
+font-size: 90%;
+padding: 0 5px 0 0;
+text-align: left;
+}

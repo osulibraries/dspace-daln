@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+
+  <map:components>
+    <map:transformers>
+      <map:transformer name="Navigation"          src="org.dspace.app.xmlui.aspect.deposit.Navigation"/>
+      <map:transformer name="Deposit"             src="org.dspace.app.xmlui.aspect.deposit.Deposit"/>
+      <map:transformer name="DepositDone"         src="org.dspace.app.xmlui.aspect.deposit.DepositDone"/>
+    </map:transformers>
+    
+    <map:selectors>
+      <map:selector name="AuthenticatedSelector"  src="org.dspace.app.xmlui.aspect.general.AuthenticatedSelector"/>
+    </map:selectors>
+ 
+     <map:matchers default="wildcard">
+      <map:matcher name="HandleTypeMatcher"       src="org.dspace.app.xmlui.aspect.general.HandleTypeMatcher"/>
+      <map:matcher name="HandleAuthorizedMatcher" src="org.dspace.app.xmlui.aspect.general.HandleAuthorizedMatcher"/>
+    </map:matchers>
+    
+  </map:components>
+ 
+   <map:flow language="javascript">
+    <map:script src="deposit.js"/>
+  </map:flow>
+ 
+   <map:pipelines>
+    <map:pipeline>
+      
+      <!-- Make sure the user is atleast logged in -->
+      <map:select type="AuthenticatedSelector">
+        <map:when test="eperson">
+          
+ 			  <map:match pattern="deposit">
+			    <map:match type="request" pattern="continue">
+			      <map:call continuation="{1}">
+					<map:parameter name="handle" value=""/>
+			      	<map:parameter name="form" value="{../1}"/>
+			      </map:call>
+			    </map:match>
+				<map:call function="doDeposit">
+				  <map:parameter name="handle" value=""/>
+			      <map:parameter name="form" value="{1}"/>
+				</map:call>
+			  </map:match>
+ 
+              <map:generate/>
+          
+              <map:transform type="Navigation"/>
+                    
+		      <map:match pattern="deposit/start">
+		        <map:transform type="Deposit"/>
+		      </map:match>
+
+		      <map:match pattern="deposit/done">
+		        <map:transform type="DepositDone"/>
+		      </map:match>
+
+		      <map:serialize type="xml"/>			
+
+        </map:when>
+        <map:otherwise>
+          
+          <!-- non-authenticated users -->
+          <map:generate/>
+          
+          <map:match pattern="deposit">
+            <map:act type="StartAuthentication"/>
+          </map:match>
+
+          <map:match pattern="deposit/*">
+            <map:act type="StartAuthentication"/>
+          </map:match>
+
+          <map:serialize/>								
+          
+        </map:otherwise>
+      </map:select>				
+      
+    </map:pipeline>
+  </map:pipelines>
+  
+  
+</map:sitemap>
+		      

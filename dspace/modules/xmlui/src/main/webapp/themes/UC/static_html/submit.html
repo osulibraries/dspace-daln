@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" media="screen" href="/themes/UC/lib/style.css" />
+<link type="text/css" rel="stylesheet" media="print" href="/themes/UC/lib/print.css" />
+<script type="text/javascript">
+				//Clear default text of emty text areas on focus
+				function tFocus(element)
+				{
+					if (element.value == ' '){element.value='';}
+				}
+				//Clear default text of emty text areas on submit
+				function tSubmit(form)
+				{
+					var defaultedElements = document.getElementsByTagName("textarea");
+					for (var i=0; i != defaultedElements.length; i++){
+						if (defaultedElements[i].value == ' '){
+							defaultedElements[i].value='';}}
+				}
+				//Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+				function disableEnterKey(e)
+				{
+				     var key;
+				
+				     if(window.event)
+				          key = window.event.keyCode;     //Internet Explorer
+				     else
+				          key = e.which;     //Firefox and Netscape
+				
+				     if(key == 13)  //if "Enter" pressed, then disable!
+				          return false;
+				     else
+				          return true;
+				}
+            </script>
+<title>How to Submit Materials</title>
+</head>
+<body>
+<div id="ds-main">
+<div id="ds-header">
+<map name="uc_home_top_bar" id="uc_home_top_bar">
+<area title="About the DRC" href="/about.html" coords="93,89,213,113" alt="About the DRC" shape="rect" />
+<area title="UC Digital Projects" href="http://digitalprojects.libraries.uc.edu/" coords="305,85,478,114" alt="UC Digital Projects" shape="rect" />
+<area title="UC Libraries" href="http://www.uc.edu/libraries/" coords="552,83,671,112" alt="UC Libraries" shape="rect" />
+<area title="University of Cincinnati" href="http://www.uc.edu/" coords="7,6,217,82" alt="University of Cincinnati" shape="rect" />
+<area title="Digital Resource Commons" href="/" coords="413,2,719,51" alt="Digital Resource Commons" shape="rect" />
+<area alt="" nohref="nohref" shape="default" />
+</map>
+<img style="border:none;width:760px;height:125px;" usemap="#uc_home_top_bar" src="css_images/uc_home_top_bar.jpg"
+ alt="University of Cincinnati Digital Resource Commons" />
+<h1 class="pagetitle">How to Submit Materials</h1>
+<h2 class="static-pagetitle">Digital Resource Commons</h2>
+<ul id="ds-trail">
+<li class="ds-trail-link first-link">
+<a href="/">DRC Home</a>
+</li>
+<li class="ds-trail-link  last-link">
+<a href="/submit.html">How to Submit Materials</a>
+</li>
+</ul>
+<div id="ds-user-box">
+<p>
+<a href="/login">Login</a>
+</p>
+</div>
+</div>
+<div id="ds-body">
+<h1 class="ds-div-head">How to Submit Materials</h1>
+<div id="aspect_artifactbrowser_CommunityViewer_div_community-home" class="ds-static-div primary repository community">
+<div id="aspect_artifactbrowser_CommunityViewer_div_community-search-browse" class="ds-static-div secondary search-browse">
+  <div id="aspect_artifactbrowser_CommunityViewer_div_community-browse" class="ds-static-div secondary browse">
+<h3 class="ds-head">Browse by</h3>
+<ul id="aspect_artifactbrowser_CommunityViewer_list_community-browse" class="ds-simple-list community-browse">
+<li>
+<a href="/handle/2374.UC/1/browse?type=title" class="">Titles</a>
+</li>
+<li>
+<a href="/handle/2374.UC/1/browse?type=author" class="">Authors</a>
+</li>
+<li>
+<a href="/handle/2374.UC/1/browse?type=dateissued" class="">Dates</a>
+</li>
+</ul>
+</div>
+  <p class="ds-paragraph">Submitters of digital content to the Ohio Digital Resource Commons (DRC) are responsible for ensuring that their content does not violate copyright.&nbsp; Ownership and copyright of digital content does not change, but submitters grant the DRC a non-exclusive right to make the content available for  research and educational purposes.&nbsp; For more information, see <a href="fairuse.html">Fair Use &amp; Copyright</a>.</p>
+  <p class="ds-paragraph">&nbsp;</p>
+  <p class="ds-paragraph">The DRC supports virtually all types and quantities of content including documents, such as articles, preprints, working papers, technical reports, conference papers, theses, dissertations, images and data sets.&nbsp; It also supports a virtually unlimited variety of digital file types and formats &mdash; anything understood by a web browser with commonly available plug-ins &mdash; including audio, video, streaming video, multimedia presentations, animations, simulations, learning objects and Web pages.&nbsp; A large storage area network allows for virtually unlimited storage space.</p>
+  <p class="ds-paragraph">&nbsp;</p>
+  <p class="ds-paragraph">Text within documents will be indexed.&nbsp; Searchable metadata for authors, titles, subjects and descriptive notes can also be assigned to each digital object.&nbsp; The DRC supports a hierarchy of &quot;Communities&quot; and &quot;Collections.&quot;</p>
+  <p class="ds-paragraph">&nbsp;</p>
+  <p class="ds-paragraph">Departments and Colleges interested in submitting materials to the DRC should <a href="feedback.html">contact</a> the UC Libraries to set up an initial consultation to discuss training and procedures.</p>
+</div>
+</div>
+</div>
+<div id="ds-options">
+<h3 class="ds-option-set-head" id="ds-search-option-head">Search</h3>
+<div class="ds-option-set" id="ds-search-option">
+                
+
+                
+                UC DRC:
+                <form method="post" id="ds-search-form" action="/search">
+<fieldset>
+<input type="text" class="ds-text-field " name="query" />
+<input value="Go" type="submit" name="submit" class="ds-button-field " onclick="&#10;                                    var radio = document.getElementById(&quot;ds-search-form-scope-container&quot;);&#10;                                    if (radio != undefined &amp;&amp; radio.checked)&#10;                                    {&#10;                                    var form = document.getElementById(&quot;ds-search-form&quot;);&#10;                                    form.action=&#10;                                &quot;/handle/&quot; + radio.value + &quot;/search&quot; ; &#10;                                    }&#10;                                " />
+</fieldset>
+</form>
+<a href="/advanced-search">Advanced Search</a>
+
+                OhioLINK DRC:
+                
+                <form action="http://drc.ohiolink.edu/drc_search/index.php/search/results" method="get" id="ds-search-form">
+<fieldset>
+<input name="query" type="text" class="ds-text-field" />
+<input value="Go" type="submit" name="submit" class="ds-button-field" />
+</fieldset>
+</form>
+</div>
+<h3 class="ds-option-set-head">Browse</h3>
+<div id="aspect_artifactbrowser_Navigation_list_browse" class="ds-option-set">
+<ul class="ds-options-list">
+<li>
+<h4 class="ds-sublist-head">All of DRC</h4>
+<ul class="ds-simple-list">
+<li>
+<a href="/community-list" class="">Communities &amp; Collections</a>
+</li>
+<li>
+<a href="/browse?type=dateissued" class="">By Issue Date</a>
+</li>
+<li>
+<a href="/browse?type=author" class="">Authors</a>
+</li>
+<li>
+<a href="/browse?type=title" class="">Titles</a>
+</li>
+<li>
+<a href="/browse?type=subject" class="">Subjects</a>
+</li>
+</ul>
+</li>
+<li>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="ds-footer">
+<div id="ds-footer-links">
+<ul>
+<li>
+<a href="/feedback.html">
+                    Feedback &amp; Contact Info
+                    </a>
+</li>
+<li>
+<a href="/fairuse.html">
+                    Fair Use &amp; Copyright
+                    </a>
+</li>
+<li>
+<a href="/submit.html">
+                       How to Submit Materials
+                    </a>
+</li>
+<li>
+                    <a href="http://drc.ohiolink.edu/">
+                       OhioLINK DRC
+                    </a>
+                  </li>
+
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript"> 
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+  var pageTracker = _gat._getTracker("UA-5946124-1");
+  pageTracker._trackPageview();
+</script> 
+</body>
+</html>

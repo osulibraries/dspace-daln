@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" media="screen" href="../lib/style.css" />
+<link type="application/rss+xml" rel="alternate" href="/xmlui/feed/rss_1.0/site" />
+<link type="application/rss+xml" rel="alternate" href="/xmlui/feed/rss_2.0/site" />
+<script type="text/javascript">
+				//Clear default text of emty text areas on focus
+				function tFocus(element)
+				{
+					if (element.value == ' '){element.value='';}
+				}
+				//Clear default text of emty text areas on submit
+				function tSubmit(form)
+				{
+					var defaultedElements = document.getElementsByTagName("textarea");
+					for (var i=0; i != defaultedElements.length; i++){
+						if (defaultedElements[i].value == ' '){
+							defaultedElements[i].value='';}}
+				}
+				//Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+				function disableEnterKey(e)
+				{
+				     var key;
+				
+				     if(window.event)
+				          key = window.event.keyCode;     //Internet Explorer
+				     else
+				          key = e.which;     //Firefox and Netscape
+				
+				     if(key == 13)  //if "Enter" pressed, then disable!
+				          return false;
+				     else
+				          return true;
+				}
+            </script>
+<title>Scholarly Commons at Miami University</title>
+</head>
+<body>
+<div id="ds-main">
+<div id="ds-header">
+<a href="/xmlui/">
+
+<span id="ds-header-logo"> </span>
+</a>
+<h1 class="pagetitle">&nbsp;</h1>
+<h2 class="static-pagetitle">&nbsp;</h2>
+<ul id="ds-trail">
+<li class="ds-trail-link first-linklast-link">
+<a href="/xmlui">Home</a>
+</li>
+</ul>
+</div>
+
+<div xmlns="http://di.tamu.edu/DRI/1.0/" id="ds-navigation">
+<a href="#">Home</a>
+
+<a href="about.html">About</a>
+<a href="contactus.html">Contact Us</a>
+<a href="author_rights.pdf">Author Rights</a>
+<a href="http://www.lib.muohio.edu/">Miami University</a>
+</div>
+
+
+
+
+
+<div xmlns="http://di.tamu.edu/DRI/1.0/" id="ds-body">
+<!-- XXXXXXXXXXXXX-->
+<!-- BEGIN of About page -->
+<!-- XXXXXXXXXXXXX-->
+
+<h1 style="font-size: 100%;" class="ds-div-head">Contact Us</h1>
+<p class="ds-paragraph">
+Scholarly Commons at Miami University <br />
+<a href="mailto:commons@lib.muohio.edu">commons@lib.muohio.edu</a>
+</p>
+</div>
+<!-- XXXXXXXXXXXXX-->
+<!-- END of About page -->
+<!-- XXXXXXXXXXXXX-->
+
+<div id="ds-options">
+<h3 class="ds-option-set-head" id="ds-search-option-head">Search</h3>
+<div class="ds-option-set" id="ds-search-option">
+
+<form method="post" id="ds-search-form" action="/xmlui/search">
+<fieldset>
+<input type="text" class="ds-text-field " name="query" />
+<input value="Go" type="submit" name="submit" class="ds-button-field " onclick="&#10;                                    var radio = document.getElementById(&quot;ds-search-form-scope-container&quot;);&#10;                                    if (radio != undefined &amp;&amp; radio.checked)&#10;                                    {&#10;                                    var form = document.getElementById(&quot;ds-search-form&quot;);&#10;                                    form.action=&#10;                                &quot;/xmlui/handle/&quot; + radio.value + &quot;/search&quot; ; &#10;                                    } &#10;                                " />
+</fieldset>
+</form>
+<a href="/xmlui/advanced-search">Advanced Search</a>
+</div>
+<h3 class="ds-option-set-head">Browse</h3>
+<div xmlns="http://di.tamu.edu/DRI/1.0/" id="aspect_artifactbrowser_Navigation_list_browse" class="ds-option-set">
+<ul class="ds-options-list">
+<!--
+<li>
+<h4 class="ds-sublist-head">All of DSpace</h4>
+<ul xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-simple-list">
+-->
+<li>
+<a href="/xmlui/community-list" class="">Communities &amp; Collections</a>
+</li>
+<li xmlns="http://di.tamu.edu/DRI/1.0/">
+<a href="/xmlui/browse?type=dateissued" class="">By Issue Date</a>
+</li>
+<li xmlns="http://di.tamu.edu/DRI/1.0/">
+<a href="/xmlui/browse?type=author" class="">Authors</a>
+</li>
+<li xmlns="http://di.tamu.edu/DRI/1.0/">
+<a href="/xmlui/browse?type=title" class="">Titles</a>
+
+</li>
+<li xmlns="http://di.tamu.edu/DRI/1.0/">
+<a href="/xmlui/browse?type=subject" class="">Subjects</a>
+</li>
+<!--
+</ul>
+</li>
+-->
+</ul>
+</div>
+
+<!--
+<h3 xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-option-set-head">My Account</h3>
+<div xmlns="http://di.tamu.edu/DRI/1.0/" id="aspect_artifactbrowser_Navigation_list_account" class="ds-option-set">
+<ul class="ds-simple-list">
+<li>
+<a href="/xmlui/login" class="">Login</a>
+</li>
+
+<li xmlns="http://di.tamu.edu/DRI/1.0/">
+<a href="/xmlui/register" class="">Register</a>
+</li>
+</ul>
+</div>
+-->
+
+</div>
+
+
+<div xmlns="http://di.tamu.edu/DRI/1.0/" id="ds-footer">
+<p>
+            Scholarly Commons at Miami University 
+            <br />
+
+<a href="#">Home</a> |
+            <a href="http://arthur.lib.muohio.edu:8080/xmlui/themes/Classic/lib/about.html">About</a> |
+            <a href="contactus.html">Contact Us</a> |
+            <a href="author_rights.pdf">Author Rights</a> |
+            <a href="http://www.lib.muohio.edu/">Miami University</a>
+<br />
+<br />
+<br />
+
+</p>
+</div>
+</div>
+</body>
+</html>

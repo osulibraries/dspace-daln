@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+	<map:components>		
+		<map:transformers>
+			<map:transformer name="Navigation" src="org.dspace.app.xmlui.aspect.lists.Navigation"/>
+			<map:transformer name="EditLists"  src="org.dspace.app.xmlui.aspect.lists.EditLists"/>
+			<map:transformer name="EditList"   src="org.dspace.app.xmlui.aspect.lists.EditList"/>
+		    <map:transformer name="Confirm"    src="org.dspace.app.xmlui.aspect.lists.Confirm"/>
+        	<map:transformer name="ItemSidebar" src="org.dspace.app.xmlui.aspect.lists.ItemSidebar"/>
+        	<map:transformer name="SearchLists" src="org.dspace.app.xmlui.aspect.lists.SearchLists"/>
+        	<map:transformer name="ShowAllLists" src="org.dspace.app.xmlui.aspect.lists.ShowAllLists"/>
+        	<map:transformer name="ViewList"   src="org.dspace.app.xmlui.aspect.lists.ViewList"/>
+        	<map:transformer name="SearchSidebar" src="org.dspace.app.xmlui.aspect.lists.SearchSidebar"/>
+        	<map:transformer name="BrowseSidebar" src="org.dspace.app.xmlui.aspect.lists.BrowseSidebar"/>
+		</map:transformers>
+
+		<map:actions>
+			<map:action name="ItemSidebarAction" src="org.dspace.app.xmlui.aspect.lists.ItemSidebarAction"/>
+			<map:action name="SearchSidebarAction" src="org.dspace.app.xmlui.aspect.lists.SearchSidebarAction"/>
+		</map:actions>
+
+		<map:selectors>
+			<map:selector name="AuthenticatedSelector" src="org.dspace.app.xmlui.aspect.general.AuthenticatedSelector"/>
+		</map:selectors>
+
+	    <map:matchers>
+            <map:matcher name="HandleAuthorizedMatcher" src="org.dspace.app.xmlui.aspect.general.HandleAuthorizedMatcher"/>
+	    </map:matchers>
+		
+	</map:components>
+		
+	<map:flow language="javascript">
+    	<map:script src="lists.js"/>
+	</map:flow>
+		
+	<map:pipelines>
+		<map:pipeline>
+		
+      		<map:select type="AuthenticatedSelector">
+        	    <map:when test="eperson">        	    
+					<map:match pattern="lists/*">
+			    		<map:match type="request" pattern="continue">
+			      			<map:call continuation="{1}">
+			      				<map:parameter name="form" value="{../1}"/>
+			      			</map:call>
+			    		</map:match>
+						<map:call function="doForm">
+			      			<map:parameter name="form" value="{1}"/>
+						</map:call>
+					</map:match>
+        		</map:when>
+        		<map:otherwise>
+        	  		<map:match pattern="lists/*">
+            		    <map:act type="StartAuthentication"/>
+          			</map:match>        		
+        		</map:otherwise>
+      		</map:select>				
+
+
+			<map:generate/>
+			
+			<map:transform type="Navigation"/>
+
+	      	<map:match pattern="lists/search-lists/view">
+				<map:transform type="SearchLists"/>
+     		</map:match>
+
+	      	<map:match pattern="lists/showall-lists/view">
+				<map:transform type="ShowAllLists"/>
+     		</map:match>
+
+	    	<map:match pattern="lists/view-list/view">
+				<map:transform type="ViewList"/>
+	     	</map:match>
+
+		    <map:match pattern="browse">
+                <map:transform type="BrowseSidebar"/>
+            </map:match>
+
+      		<map:select type="AuthenticatedSelector">
+        	    <map:when test="eperson">
+        	    
+					<map:match pattern="lists/*">
+			    		<map:match type="request" pattern="continue">
+			      			<map:call continuation="{1}">
+			      				<map:parameter name="form" value="{../1}"/>
+			      			</map:call>
+			    		</map:match>
+						<map:call function="doForm">
+			      			<map:parameter name="form" value="{1}"/>
+						</map:call>
+					</map:match>
+
+					<map:match pattern="lists/build/action">
+						<map:act type="SearchSidebarAction"/>
+					</map:match>
+
+					<map:match pattern="lists/item/action">
+						<map:act type="ItemSidebarAction"/>
+					</map:match>
+
+	                <map:match pattern="handle/*/*">
+    	                <map:match type="HandleAuthorizedMatcher" pattern="READ">
+        	                <map:transform type="ItemSidebar"/>
+            	        </map:match>
+                	</map:match>                                
+
+	                <map:match pattern="search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+                    <map:match pattern="simple-search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+                    <map:match pattern="advanced-search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+                    <map:match pattern="fancy-search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+                    <map:match pattern="handle/*/*/search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+                    <map:match pattern="handle/*/*/simple-search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+                    <map:match pattern="handle/*/*/advanced-search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+					<map:match pattern="handle/*/*/fancy-search">
+                    	<map:transform type="SearchSidebar"/>
+                    </map:match>
+
+          		    <map:match pattern="lists/lists/form">
+            	    	<map:transform type="EditLists"/>
+          			</map:match>
+        	            	    
+          	    	<map:match pattern="lists/list/form">
+           		    	<map:transform type="EditList"/>
+       				</map:match>
+
+	      			<map:match pattern="lists/confirm/form">
+						<map:transform type="Confirm"/>
+	      			</map:match>
+
+        		</map:when>
+        		<map:otherwise>
+
+          	    	<map:match pattern="lists/*/form">
+           		    	<map:act type="StartAuthentication"/>
+       				</map:match>
+        		
+        		</map:otherwise>
+      		</map:select>				
+		
+			<map:serialize type="xml"/>
+        		
+		</map:pipeline>
+	</map:pipelines>
+</map:sitemap>
+			

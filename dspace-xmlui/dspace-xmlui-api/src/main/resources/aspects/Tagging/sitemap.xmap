@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+	<map:components>		
+		<map:transformers>
+        	<map:transformer name="TagViewer" src="org.dspace.app.xmlui.aspect.tagging.TagViewer"/>
+		</map:transformers>
+
+		<map:actions>
+        	<map:action name="TagAction" src="org.dspace.app.xmlui.aspect.tagging.TagAction"/>
+		</map:actions>
+
+        <map:matchers default="wildcard">
+            <map:matcher name="HandleAuthorizedMatcher" src="org.dspace.app.xmlui.aspect.general.HandleAuthorizedMatcher"/>
+        </map:matchers>
+
+	</map:components>
+		
+	<map:pipelines>
+		<map:pipeline>
+                        
+				<map:generate/>
+
+				<map:match pattern="handle/*/*/edit-tags">
+					<map:act type="TagAction"/>
+				</map:match>									
+
+                <map:match pattern="handle/*/*">
+                    <map:match type="HandleAuthorizedMatcher" pattern="READ">
+                        <map:transform type="TagViewer"/>
+                    </map:match>
+                </map:match>                                
+                                
+				<map:serialize type="xml"/>		
+		
+		</map:pipeline>
+	</map:pipelines>
+</map:sitemap>
+		

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
+<body>
+<div id="file.news.div.news" n="news" rend="infobox">
+<head>Ohio Digital Resource Commons</head>
+<p>Welcome to the Ohio Digital Resource Commons (DRC), an initiative of OhioLINK and
+
+its member libraries.   The DRC is a service that collects, preserves, and distributes
+
+digital material.  Repositories are important tools for preserving an organization's legacy
+
+or for providing access to unique collections; they facilitate digital preservation and
+
+scholarly communication.</p>
+</div>
+
+</body>
+<options/>
+<meta>
+<userMeta/>
+<pageMeta/>
+<repositoryMeta/>
+</meta>
+</document>

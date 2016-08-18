@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
+<body>
+<div id="file.news.div.news" n="news" rend="primary">
+<head>Digital Archives of Literacy Narratives</head>
+<p>
+  <hi rend="bold">Welcome!</hi> The Digital Archives of Literacy Narratives (DALN) is a publicly available
+  archive of personal literacy narratives in a variety of formats (text, video, audio)
+  that together provide a historical record of the literacy practices and values
+  of contributors, as those practices and values change. The project is jointly directed by faculty from The Ohio State University and Georgia State University.
+</p>
+<p>
+  The DALN invites people of all ages, races, communities, backgrounds, and interests
+  to contribute stories about how &#x2014; and in what circumstances &#x2014; they read, write, and compose meaning,
+  and how they learned to do so (or helped others learn). We welcome personal narratives about 
+  reading and composing all kinds of texts, both formal
+  and informal: diaries, blogs, poetry, music and musical lyrics, fan zines,
+  school papers, videos, sermons, gaming profiles, speeches, chatroom exchanges,
+  text messages, letters, stories, photographs, etc. We also invite contributors
+  to supplement their narratives with samples of their own writing (papers, letters, zines, speeches,
+  etc.) and compositions (music, photographs, videos, sound recordings, etc.).
+</p>
+<p>
+   If you would like more detailed information about creating a literacy narrative and contributing it
+   to the DALN, please visit our <hi rend="bold"><xref target="http://dalnresources.org.ohio-state.edu/contents.html">resources and help pages</xref></hi>. Also, for DALN-related news, interviews, and other important resources, visit <hi rend="bold"><xref target="https://thedaln.wordpress.com">The DALN Blog</xref></hi>.
+</p>
+<p>
+  To submit your literacy narrative, you must first <hi rend="bold"><xref target="/register">register</xref></hi> with
+  the DALN, a simple process that requires only a valid e-mail
+  address. Once you have registered, you can <hi rend="bold"><xref target="/login">login</xref></hi> and 
+  <hi rend="bold"><xref target="/submissions">submit a narrative</xref></hi>.
+</p>
+  <!-- HLU 081117 -->
+<p id="DALN-main-links">
+  <hi rend="bigBold">
+  <xref target="/register">Register</xref>
+  &#xa0;&#xa0;&#xa0;|&#xa0;&#xa0;&#xa0;
+  <xref target="/login">Login</xref>
+  &#xa0;&#xa0;&#xa0;|&#xa0;&#xa0;&#xa0;
+  <xref target="/submissions">Submit a Narrative</xref>
+  &#xa0;&#xa0;&#xa0;&#xa0;|&#xa0;&#xa0;&#xa0;&#xa0;
+  <xref target="http://dalnresources.org.ohio-state.edu/contents.html">Consult Resources</xref>
+  &#xa0;&#xa0;&#xa0;|&#xa0;&#xa0;&#xa0;
+  <xref target="http://dalnresources.org.ohio-state.edu/partners.html">View Contributing Partners</xref>
+  </hi>
+</p>
+<p><xref target="http://dalnresources.org.ohio-state.edu/WhyRegisterDALN.html">Why do we ask you to register?</xref></p>
+</div>
+</body>
+<options/>
+<meta>
+<userMeta/>
+<pageMeta/>
+<repositoryMeta/>
+</meta>
+</document>
